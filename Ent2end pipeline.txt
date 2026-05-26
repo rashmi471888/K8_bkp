@@ -1,0 +1,77 @@
+ Create a new branch dev_bkp_082923 based on dev. done
+
+2) Delete the actual dev branch from the repo ML-Initiatives done
+
+3) Create a new dev branch based on the 7EYE-PRE-DEV-TESTING done
+
+ 
+
+4) Step Inside the aksd-apic-002
+
+   az account set --subscription "Enterprise Dev/Test Subscription" && az aks get-credentials --resource-group RG-Dev-APIC --name aksd-apic-002
+
+5) Create namespace called 7eye in aksd-apic-002.
+
+   kubectl create namespace 7eye done
+
+ 
+
+6) Create a dependents like secrets, configmaps, docker secret on the namespace 7eye.
+
+   Configmaps:
+
+       kubectl create -f file-name -n 7eye
+
+   Secrets:
+
+       kubectl create secret blobfusecreds-mvp -n 7eye
+
+       kubectl create secret blobfusecreds-mvp-delta-load -n 7eye
+
+   Docker Secret:
+
+       kubectl create secret docker-registry regcred --docker-server=allservicescontainerimages.azurecr.io  --docker-username=AllServicesContainerImages --docker-password=JxVw4XdTgdwn1TsYseM+QyG7SsT2gdRM --docker-email=sdjea001@7-11.com -n 7eye
+
+ 
+
+7) Include namespace config in the deployment file.
+
+   eg: 
+
+       apiVersion: apps/v1
+
+       kind: Deployment
+
+       metadata:
+
+           name: mvp-delta-load-api-#{env}#
+
+           namespace: #{namespace}#          
+
+ 
+
+8) Create new build/release pipelines - 7eye-app-build / 7eye-api-build / 7eye-delta-load-api-build.
+
+ 
+
+9) Create a new internal service load-balancer ip's for app, api & delta load api.
+
+       kubectl create -f internal-IP.yaml -n namespace
+
+ 
+
+10) Add the new values in the variables section from the Release Pipeline.
+
+   namespace
+
+   new service ip address
+
+ 
+
+helm install eye-delta-api-nginx-controller ingress-nginx/ingress-nginx --namespace kube-system -f ingress-controller-internal.yml --set controller.replicaCount=1 --set controller.ingressClassResource.name=eye-delta-api --set controller.service.externalTrafficPolicy=Local
+
+ 
+
+11) Test the application and get sign off from 7eye team.
+
+12) Create DNS Update request to switch new IP.
