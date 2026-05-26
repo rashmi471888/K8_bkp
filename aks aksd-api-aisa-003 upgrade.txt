@@ -1,0 +1,66 @@
+C:\Users\10712201>az account set --subscription "Enterprise API Subscription" && az aks get-credentials --resource-group RG-Dev-AISA --name aksd-api-aisa-003
+Merged "aksd-api-aisa-003" as current context in C:\Users\10712201\.kube\config
+
+C:\Users\10712201>kubectl config current-context
+aksd-api-aisa-003
+
+C:\Users\10712201>kubectl get nodes -o wide
+NAME                                STATUS   ROLES   AGE   VERSION    INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+aks-agentpool-33582092-vmss000000   Ready    agent   73d   v1.24.10   10.224.0.4    <none>        Ubuntu 18.04.6 LTS   5.4.0-1105-azure   containerd://1.6.18+azure-1
+aks-agentpool-33582092-vmss000003   Ready    agent   70d   v1.24.10   10.224.0.7    <none>        Ubuntu 18.04.6 LTS   5.4.0-1105-azure   containerd://1.6.18+azure-1
+aks-agentpool-33582092-vmss000035   Ready    agent   10d   v1.24.10   10.224.0.10   <none>        Ubuntu 18.04.6 LTS   5.4.0-1105-azure   containerd://1.6.18+azure-1
+aks-agentpool-33582092-vmss000037   Ready    agent   10d   v1.24.10   10.224.0.5    <none>        Ubuntu 18.04.6 LTS   5.4.0-1105-azure   containerd://1.6.18+azure-1
+
+C:\Users\10712201>kubectl get deployment
+NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE       Driver
+7cast-api-dev                                1/1     1                      1                  72d-----   CSI
+7cast-app-dev                               1/1     1                      1                  72d
+7exp-api-dev                                 1/1     1                      1                  72d
+7exp-app-dev                                 1/1     1                     1                  72d
+7exp-store-api-dev                        1/1     1                      1                   52d
+bir-api-dev                                     1/1     1                       1                     72d
+bir-app-dev                                    1/1     1                       1                    72d
+comparison-utility-api-dev            0/1     1                       0                      70d
+comparison-utility-app-dev           1/1     1                       1                       70d
+dpr-dashboard-dev-v2                  1/1     1                      1                         70d
+dpr-forms-dev                              1/1     1                        1                        2d20h
+dpr-verification-dev-v2                1/1     1                          1                     70d
+jarvis-api-dev                              1/1     1                          1                      44d
+jarvis-app-dev                              1/1     1                          1                       45d
+mdm-site-master-app-dev             1/1     1                          1                     69d
+mvp-api-dev                                   1/1     1                       1                       45d
+mvp-api-pre-dev                            1/1     1                          1                      30d
+mvp-app-dev                                  1/1     1                        1                        45d
+mvp-app-pre-dev                             1/1     1                        1                     29d
+mvp-delta-load-api-dev                   1/1     1                        1                   45d
+mvp-delta-load-api-pre-dev            1/1     1                         1                   30d
+spark-ui-app-dev                          1/1     1                            1                      69d
+
+C:\Users\10712201>kubectl get sts
+No resources found in default namespace.
+
+C:\Users\10712201>kubectl get cronjobs
+NAME                                                  SCHEDULE       SUSPEND   ACTIVE   LAST SCHEDULE   AGE
+7exp-store-orchestrator-dev               15 12 * * *        False                0        19h                         71d
+7intel-ingestion-dev-gen2                    30 14 * * *       False                0        17h                         70d
+cluster-monitoring-dev                       */30 * * * *         False                 0        4m21s                     70d
+dbks-events-monitoring-dev               0 14 * * *           False                  0        17h                        70d
+dpr-scheduler-dev-v2                         0 */1 * * *             True                    0        <none>                    70d
+dremio-cloner-dev-gen2                   0 11 * * *             False                    0        20h                         69d
+hello                                                  * * * * *                 True                  0        69d                           69d
+snow-downloads-qc-dev-gen2          30 12 * * *              False               0        19h                            69d
+sprinklr-v1-dev-gen2                         0 5 * * *                 True                 1        43d                               69d
+
+C:\Users\10712201>kubectl get namespaces
+NAME                                  STATUS             AGE
+default                                        Active           73d
+kube-node-lease                       Active          73d
+kube-public                              Active             73d
+kube-system                               Active           73d
+kubernetes-dashboard                   Active           70d
+
+C:\Users\10712201>kubectl get  configmap
+NAME               DATA   AGE
+env-config         6      73d
+kube-config        1      28d
+kube-root-ca.crt   1      73d

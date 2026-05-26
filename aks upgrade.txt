@@ -1,0 +1,16 @@
+aksd-apic-002
+
+
+
+
+
+az account set --subscription "Enterprise API Subscription" && az aks get-credentials --resource-group RG-DEV-AISA --name aksd-api-aisa-002
+
+az aks get-upgrades --resource-group RG-Dev-AISA --name aksd-api-aisa-002 --output table
+
+az aks show --resource-group RG-Dev-AISA --name aksd-api-aisa-002 --output table
+
+az aks upgrade --resource-group RG-Prod-APIC --name aksd-api-aisa-002 --kubernetes-version 1.19.13
+
+version-
+https://learn.microsoft.com/en-us/azure/aks/supported-kubernetes-versions?tabs=azure-cli#kubernetes-version-support-policy
