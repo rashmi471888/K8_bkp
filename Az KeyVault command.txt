@@ -1,0 +1,19 @@
+Az KeyVault Commands : 
+
+ 
+
+set-context:
+
+az account set --subscription "Dev/Test Subscription"
+
+ 
+
+create:
+
+az keyvault secret set --name DDE-LOGISTICS-DATALAKE-CKAFKA-SERVER  --vault-name KeyVault-DDE-DEV-01 --value pkc-4vzyp.eastus2.azure.confluent.cloud:9092
+
+ 
+
+show:
+
+az keyvault secret show --subscription 0c8ee94f-e9a1-4b8a-8bf5-12845b6c165b --vault-name KeyVault-DDE-DEV-01 --name DDE-LOGISTICS-DATALAKE-CKAFKA-SERVER --query value
