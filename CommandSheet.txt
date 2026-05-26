@@ -1,0 +1,210 @@
+k8
+=====
+kubectl get logs -f (appname)
+kubectl get svc | grep (app)
+kubectl get deploy | grep bir
+kubectl scale deployment bir-app-dev - - replicas-0
+kubectl get svc -n kube-system | findstr exp
+kubectl get svc -n kube-system
+
+🔍 Cluster & Context Management
+kubectl config get-contexts – List all available contexts.
+kubectl config use-context <context-name> – Switch between clusters.
+
+📦 Workloads (Pods, Deployments, etc.)
+kubectl get pods – List all pods in the current namespace.
+kubectl get all – Get all resources (pods, services, deployments, etc.).
+kubectl describe pod <pod-name> – Detailed info about a specific pod.
+kubectl logs <pod-name> – View logs of a pod.
+kubectl exec -it <pod-name> -- /bin/bash – Access a pod’s shell.
+
+🚀 Deployments & Services
+kubectl get deployments – List all deployments.
+kubectl rollout restart deployment <deployment-name> – Restart a deployment.
+kubectl expose deployment <deployment-name> --type=LoadBalancer --port=80 – Expose a deployment as a service.
+kubectl scale deployment <deployment-name> --replicas=3 – Scale a deployment.
+
+🔄 Apply & Delete Resources
+kubectl apply -f <file.yaml> – Apply configuration from a YAML file.
+kubectl delete -f <file.yaml> – Delete resources defined in a YAML file.
+kubectl delete pod <pod-name> – Delete a specific pod.
+
+📁 Namespaces
+kubectl get namespaces – List all namespaces.
+kubectl config set-context --current --namespace=<namespace> – Set default namespace.
+
+🧪 Debugging & Troubleshooting
+kubectl top pod – Show resource usage (requires metrics-server).
+kubectl describe node <node-name> – Detailed info about a node.
+kubectl get events – View recent events in the cluster.
+
+
+AKS login
+========
+az account set --subscription "Enterprise Dev/Test Subscription" && az aks get-credentials --resource-group RG-Dev-APIC --name aksd-apic-002
+
+az account set --subscription "Enterprise Dev/Test Subscription" && az aks get-credentials --resource-group RG-Dev-APIC --name aksd-apic-001
+
+az account set --subscription "Enterprise API Subscription" && az aks get-credentials --resource-group RG-Prod-AISA --name aksp-api-aisa-001
+
+az account set --subscription "Enterprise API Subscription" && az aks get-credentials --resource-group RG-Dev-AISA --name aksd-api-aisa-003
+
+az account set --subscription "Enterprise API Subscription" && az aks get-credentials --resource-group RG-Dev-APIC --name aksd-api-aisa-006-astronomer
+
+az account set --subscription "Enterprise Subscription" && az aks get-credentials --resource-group RG-Prod-FADL --name aksp-fadl-001
+
+az account set --subscription "Enterprise API Subscription" && az aks get-credentials --resource-group RG-Prod-AISA --name aksp-api-aisa-002
+
+az account set --subscription "Enterprise API Subscription" && az aks get-credentials --resource-group RG-Prod-APIC --name aksp-api-aisa-006-astronomer
+
+
+
+
+Pod & Deployment:
+=================
+kubectl delete pod pinot-controller-0 -n pinot
+
+
+
+Dashboard Login from Local Workstation
+======================================
+
+kubectl port-forward pods/kubernetes-dashboard-678bb47949-99jgz 8080:8080 -n kubernetes-dashboard
+
+kubectl port-forward svc/pinot-controller 9000:9000 -n pinot
+
+Secrets:
+========
+
+kubectl create secret generic smbrcnetnificreds-share --from-literal username=sa-dde-admin@7-11.com --from-literal password="##########" --type="microsoft.com/smb"
+
+kubectl create secret docker-registry regcred --docker-server=allservicescontainerimages.azurecr.io  --docker-username=AllServicesContainerImages --docker-password=############### --docker-email=sdjea001@7-11.com
+
+az keyvault secret show --subscription 0c8ee94f-e9a1-4b8a-8bf5-12845b6c165b --vault-name KeyVault-DDE-DEV-01 --name DDE-APP-7exp-Dev-CLIENT-ID --query value
+
+kubectl create secret docker-registry prodreg --docker-server=allcontainerimages.azurecr.io  --docker-username=AllContainerImages --docker-password=################# --docker-email=sdjea001@7-11.com
+
+kubectl create secret generic sa7ephorizonprod01creds --from-literal azurestorageaccountname=sa7ephorizonprod01 --from-literal azurestorageaccountkey="############################" --type=Opaque -n nifi
+
+kubectl create secret generic blobfusecreds-mdmupload --from-literal accountname=ddeprodblobstorage001 --from-literal accountkey="h##################docke" --type="azure/blobfuse"
+
+
+copy from pod to local:
+======================
+kubectl cp nifi/nifi-0:/opt/nifi/flowfile_repository/flow.xml.gz /c/Users/M1050461.MINDTREE/Downloads/NIFI_FLOW_BKP_26072022_DEV
+
+
+List ManagedresourceGroup for the AKS cluster:
+============================================
+az aks show --resource-group RG-Prod-AISA --name aksp-api-aisa-001 --query nodeResourceGroup -o tsv
+
+Public IP:
+===================
+
+az network public-ip create --resource-group MC_RG-Dev-AISA_aksd-api-aisa-005-spark_eastus2 --name aisaDevPublicIP10 --allocation-method static  --sku Standard
+
+az network public-ip list -g MC_RG-Prod-AISA_aksp-api-aisa-001_eastus2
+
+az network public-ip update -g MC_RG-Prod-AISA_aksp-api-aisa-002_eastus2 --ids "/subscriptions/a5b83fbc-85e5-49d6-b27e-dd60c84bbce0/resourceGroups/mc_rg-prod-aisa_aksp-api-aisa-002_eastus2/providers/Microsoft.Network/publicIPAddresses/kubernetes-ad853e411e0c1408481a72bfed9de5d3"  --name aisaProd002PublicIP12 --allocation-method Static
+
+az network public-ip list -g MC_RG-Prod-AISA_aksp-api-aisa-001_eastus2 --query "[?ipAddress!=null]|[?contains(ipAddress, '137.116.58.172')].[id]" --output tsv
+
+
+Helm:
+====
+
+helm repo add spark-operator https://googlecloudplatform.github.io/spark-on-k8s-operator
+
+helm install spark-operator spark-operator/spark-operator --namespace spark --create-namespace
+
+External IP :
+helm install stable/nginx-ingress --namespace kube-system --set controller.service.loadBalancerIP="PUBLICIP" --set controller.replicaCount=1 --set controller.service.externalTrafficPolicy=Local
+
+Internal IP :
+helm install dataassure-dev-ingress-controller nginx-stable/nginx-ingress --namespace kube-system -f ingress-controller.yml --set controller.replicaCount=1 --set controller.ingressClass=nginx-dataassure
+
+
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+
+helm install sevenexp-store-ingress-nginx-controller ingress-nginx/ingress-nginx --namespace kube-system -f ingress-controller.yml --set controller.replicaCount=1 --set controller.ingressClassResource.name=nginx-
+
+helm install jupyter-dev ingress-nginx/ingress-nginx --namespace kube-system -f ingress-controller.yml --set controller.replicaCount=1 --set controller.ingressClassResource.name=jupyter-dev
+
+
+helm install jupyter-feat ingress-nginx/ingress-nginx --namespace kube-system -f ingress-controller.yml --set controller.replicaCount=1 --set controller.ingressClassResource.name=jupyter-feat
+
+helm upgrade spark-operator spark-operator/spark-operator --version 1.1.26 --namespace spark
+
+
+Cronjob:
+-=======
+
+kubectl patch cronjobs wthr-observation-dev -p '{"spec" : {"suspend" : true }}' -n spark-apps
+
+kubectl create job --from=cronjob/snow-downloads-daily-v3-dev-gen2  snow-downloads-daily-v3-dev-gen2-manual-br
+
+Scaling
+============
+kubectl scale statefulset pinot-broker --replicas=0 -n pinot
+
+kubectl scale statefulset pinot-server --replicas=0 -n pinot
+
+ClusterRole:
+============
+
+kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard --user=clusterUser
+
+Cordon & Drain:
+==============
+
+kubectl cordon aks-agentpool-37911799-vmss000000
+
+kubectl drain aks-agentpool-37911799-vmss000000 --ignore-daemonsets
+
+Disk:
+=====
+
+az vmss disk detach --instance-id 1 --vmss-name aks-agentpool-37911799-vmss --ids /subscriptions/ee691273-18af-4600-bc24-eb6768bf9cfa/resourceGroups/MC_RG-Prod-APIC_aksp-apic-002_eastus2/providers/Microsoft.Compute/virtualMachineScaleSets/aks-agentpool-37911799-vmss/virtualMachines/1 --resource-group MC_RG-Prod-APIC_aksp-apic-002_eastus2
+
+
+
+
+AKS-ServicePrincipal:
+======================
+
+SP_ID=$(az aks show --resource-group RG-Prod-APIC --name aksp-apic-002 --query servicePrincipalProfile.clientId -o tsv)
+
+az ad sp credential reset --name <outputfrom1stcommand> --query password -o tsv
+
+SP_ID=$(az aks show --resource-group RG-Prod-APIC --name aksp-apic-001 --query servicePrincipalProfile.clientId -o tsv)
+az ad sp credential list --id $SP_ID --query "[].endDate" -o tsv
+az aks update-credentials --resource-group RG-Prod-APIC --name aksp-apic-002 --reset-service-principal --service-principal 4f8af936-6d35-4228-8a21-68614bd09995 --client-secret H5tur1E35fV3yiNS-Xtyw~YuzOYlZQ9KB_
+
+External-Driver:
+===============
+
+kubectl apply -f https://raw.githubusercontent.com/Azure/kubernetes-volume-drivers/master/flexvolume/blobfuse/deployment/blobfuse-flexvol-installer-1.9.yaml -n spark-apps
+
+kubectl apply -f https://raw.githubusercontent.com/Azure/kubernetes-volume-drivers/master/flexvolume/smb/deployment/smb-flexvol-installer.yaml -n kube-system
+
+kubectl apply -f https://raw.githubusercontent.com/Azure/kubernetes-volume-drivers/master/flexvolume/blobfuse/deployment/blobfuse-flexvol-installer-1.9.yaml
+
+TLS :
+====
+
+kubectl create secret tls 7cast-api-ingress-10042022 --key 7cast-api.7-11.com.key --cert 7cast-api.7-11.com.crt
+
+kubectl create secret tls 7cast-app-ingress-10042022 --key 7cast.7-11.com.key --cert 7cast.7-11.com.crt
+
+
+Virtual Machine:
+================
+
+az vmss list -g $NodeResourceGroup --query=[].name -o tsv
+az vmss list-instances -n $VMSS -g $NodeResourceGroup -o table        
+az vmss list-instances -n $VMSS -g $NodeResourceGroup --query=[].instanceId -o table 
+
+Node:
+=====
+kubectl debug node/aks-nodepool1-12345678-vmss000000 -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0
+
