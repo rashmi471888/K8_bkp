@@ -1,0 +1,155 @@
+Description:REQ1475722
+Caller: Rashmi Rai
+On Behalf of: Rashmi Rai
+Best contact number: 6363745658
+Best contact time: working hours
+Time Zone: CST
+Domain name (Common Name) being requested: 7cast-dev.7-11.com
+SAN Names (Subject alternative names): 7cast-dev.7-11.com
+7-Eleven Director Application Contact: Patricia Djukanovich
+Technical Contact (Distribution Group is preferred, if not, contact name) : Laxmikant Shrigadi
+Certificate type?: Internal
+Are you attaching CSR to request? (Doing this will prevent you from requesting a PFX file) : Yes
+Certificate format: P7B
+Special Requirements: I have attached the CSR. Please generate the certificate for the domain name and send us the certificate in. p7b format.
+
+
+
+Description:REQ1475738
+Caller: Rashmi Rai
+On Behalf of: Rashmi Rai
+Best contact number: 6363745658
+Best contact time: working hours
+Time Zone: CST
+Domain name (Common Name) being requested: 7dataassure-forms-dev.7-Eleven.com
+SAN Names (Subject alternative names): 7dataassure-forms-dev.7-Eleven.com
+7-Eleven Director Application Contact: Patricia Djukanovich
+Technical Contact (Distribution Group is preferred, if not, contact name) : Laxmikant Shrigadi
+Certificate type?: Internal
+Are you attaching CSR to request? (Doing this will prevent you from requesting a PFX file) : Yes
+Certificate format: P7B
+Special Requirements: I have attached the CSR. Please generate the certificate for the domain name and send us the certificate in. p7b format.
+
+
+
+Description:REQ1475740
+Caller: Rashmi Rai
+On Behalf of: Rashmi Rai
+Best contact number: 6363745658
+Best contact time: working hours
+Time Zone: CST
+Domain name (Common Name) being requested: 7dataassure-forms.7-Eleven.com
+SAN Names (Subject alternative names): 7dataassure-forms.7-Eleven.com
+7-Eleven Director Application Contact: Patricia Djukanovich
+Technical Contact (Distribution Group is preferred, if not, contact name) : Laxmikant Shrigadi
+Certificate type?: External
+Are you attaching CSR to request? (Doing this will prevent you from requesting a PFX file) : Yes
+Certificate format: P7B
+Special Requirements: I have attached the CSR. Please generate the certificate for the domain name and send us the certificate in. p7b format.
+
+
+MAIL- New Certificate Request - 7cast-dev.7-11.com, 7dataassure-forms-dev.7-Eleven.com & 7dataassure-forms.7-Eleven.com
+======================================================================================================================================================
+
+Hi Jay,
+
+
+
+I have submitted a request in the portal already and REQ1475722, REQ1475738 and REQ1475740 are the tickets number. This mail is for your reference.
+
+
+Can you please generate the certificate for the domain names below and send us the certificate in .p7b format.
+
+Attached to this mail are the CSR's and their respective details. 
+
+ 
+
+7cast-dev.7-11.com
+
+DEV:
+
+Project / Application Name: 7cast
+IS Business Owner (7-Eleven Director): Djukanovich Patricia
+Server Name: LoadBalancer
+Platform (See list of platform options below): Microsoft
+Server Site Label: standard
+Organizational Unit: IT
+Organization: must be spelled exactly as it is on the next line, including spaces,dashes, case sensitive, and comma : 7-Eleven, Inc.
+Production / Test / Dev: Dev
+Internal / External (DMZ): Internal
+Common Name: 7cast-dev.7-11.com
+IP address which this site will be bound to:  172.19.32.209
+Number of licenses required for this cert: 1
+2048-bit CSR : yes
+Web Admin contact information :  Laxmikant Shrigadi
+Stand alone or behind a load balancer: Stand alone
+ 
+
+7dataassure-forms-dev.7-Eleven.com
+
+
+Dev:
+
+Project / Application Name: 7dataassure
+IS Business Owner (7-Eleven Director):Djukanovich Patricia
+Server Name: LoadBalancer
+Platform (See list of platform options below): Microsoft
+Server Site Label: standard
+Organizational Unit: IT
+Organization: must be spelled exactly as it is on the next line, including spaces,dashes, case sensitive, and comma : 7-Eleven, Inc.
+Production / Test / Dev: Dev
+Internal / External (DMZ): Internal
+Common Name: 7dataassure-forms-dev.7-Eleven.com
+IP address which this site will be bound to:  52.179.252.248
+Number of licenses required for this cert: 1
+2048-bit CSR : yes
+Web Admin contact information :  Laxmikant Shrigadi
+Stand alone or behind a load balancer: Stand alone
+
+
+7dataassure-forms.7-Eleven.com
+
+
+Prod:
+
+Project / Application Name: 7dataassure
+IS Business Owner (7-Eleven Director):Djukanovich Patricia
+Server Name: LoadBalancer
+Platform (See list of platform options below): Microsoft
+Server Site Label: standard
+Organizational Unit: IT
+Organization: must be spelled exactly as it is on the next line, including spaces,dashes, case sensitive, and comma : 7-Eleven, Inc.
+Production / Test / Dev: Prod
+Internal / External (DMZ): Internal
+Common Name: 7dataassure-forms.7-Eleven.com
+IP address which this site will be bound to:   52.167.6.153
+Number of licenses required for this cert: 1
+2048-bit CSR : yes
+Web Admin contact information :  Laxmikant Shrigadi
+Stand alone or behind a load balancer: Stand alone
+
+
+ip 
+==================================
+C:\Users\10712201>nslookup 7cast-dev.7-11.com
+Server:  ustxalddc1.7-11.com
+Address:  10.132.10.20
+
+Name:    7cast-dev.7-11.com
+Address:  172.19.32.209
+
+
+C:\Users\10712201>nslookup 7dataassure-forms-dev.7-Eleven.com
+Server:  ustxalddc1.7-11.com
+Address:  10.132.10.20
+
+Name:    7dataassure-forms-dev.7-Eleven.com
+Address:  52.179.252.248
+
+
+C:\Users\10712201>nslookup 7dataassure-forms.7-Eleven.com
+Server:  ustxalddc1.7-11.com
+Address:  10.132.10.20
+
+Name:    7dataassure-forms.7-Eleven.com
+Address:  52.167.6.153

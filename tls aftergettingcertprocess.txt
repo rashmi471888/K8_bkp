@@ -1,0 +1,876 @@
+login as: rrai3014@7-11.com
+rrai3014@7-11.com@172.22.143.100's password:
+Last login: Tue Jul 11 03:41:26 2023 from 172.16.56.62
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [99] :
+ ~$ broot -i
+[sudo] password for rrai3014@7-11.com:
+Script started, file is /var/brootlogs/rrai3014@7-11.com.230714
+
+Warning Production!
+root@MSPL-DDEFTP-A01 ~ # ls
+bridg
+bridg.pub
+chetan
+conf
+dead.letter
+Dockerfile
+dremio
+fadlg2devdlake001
+fadlg2proddlake001
+get_helm.sh
+kubectl-root-in-host.sh
+kube-state-metrics-1.3.zip
+kube-state-metrics-release-1.3
+output.txt
+pingtest_pass.out
+RG-DEV-FADL_AKS-Cluster_aksd-fadl-001_config_2020-12-01_23-41-33.json
+schema.html
+schema.json
+sftp_experian_dev
+spark-on-k8s
+
+Warning Production!
+root@MSPL-DDEFTP-A01 ~ # cd /
+
+Warning Production!
+root@MSPL-DDEFTP-A01 / # ls
+1                                   7gov-dev.7-11.com  boot                     data-audit.7-11.com.p7b  etc   lib64  mount  root  srv   test2   usr
+7dataassure-forms.7-Eleven.com      backup             data                     dev                      home  media  opt    run   sys   tmp     var
+7dataassure-forms.7-eleven.com.p7b  bin                data-audit.7-11.com.crt  enterprise_data          lib   mnt    proc   sbin  test  upload
+
+Warning Production!
+root@MSPL-DDEFTP-A01 / # ls -l
+total 88
+-rw-r--r--    1 root     root          0 Sep 17  2021 1
+-rw-r--r--    1 root     root       5902 Jul 26  2022 7dataassure-forms.7-Eleven.com
+-rw-r--r--    1 root     root       5902 Jul 26  2022 7dataassure-forms.7-eleven.com.p7b
+-rw-r--r--    1 root     root       2262 Jul  9  2021 7gov-dev.7-11.com
+-rw-r--r--    1 root     root       1074 Aug 29  2022 backup
+lrwxrwxrwx.   1 root     root          7 Oct 31  2018 bin -> usr/bin
+dr-xr-xr-x.   4 root     root       4096 Jun 30  2022 boot
+drwx---r-x.  14 root     root       4096 Nov  9  2022 data
+-rw-r--r--    1 root     root       6808 Dec 24  2021 data-audit.7-11.com.crt
+-rw-r--r--    1 root     root       4739 Dec 24  2021 data-audit.7-11.com.p7b
+drwxr-xr-x   18 root     root       3080 Jul 14 04:13 dev
+drwxr-xr-x    3 root     root         24 Jan 19 04:41 enterprise_data
+drwxr-xr-x. 121 root     root       8192 Oct 14  2022 etc
+drwxr-xr-x.  36 root     root       4096 Apr 21 05:16 home
+lrwxrwxrwx.   1 root     root          7 Oct 31  2018 lib -> usr/lib
+lrwxrwxrwx.   1 root     root          9 Oct 31  2018 lib64 -> usr/lib64
+drwxr-xr-x.   2 root     root          6 Dec 14  2017 media
+drwxr-xr-x.  11 root     root        196 Jan 19 04:43 mnt
+drwxr-xr-x.   7 root     root        124 Jan 31  2022 mount
+drwxr-xr-x.   8 root     root         82 Sep 17  2021 opt
+dr-xr-xr-x  198 root     root          0 Jun 29  2022 proc
+dr-xr-x---.  24 root     root       4096 Jul 11 06:39 root
+drwxr-xr-x   39 root     root       1260 Jul 14 04:13 run
+lrwxrwxrwx.   1 root     root          8 Oct 31  2018 sbin -> usr/sbin
+drwxr-xr-x.   2 root     root          6 Dec 14  2017 srv
+dr-xr-xr-x   13 root     root          0 Jun 29  2022 sys
+drwxrwx---    3 root     root         29 Jan 29  2021 test
+-rw-r--r--    1 root     root          0 Jan 29  2021 test2
+drwxrwxrwt.  17 root     root       8192 Jul 14 04:36 tmp
+drwx------.  24 dde-sftp sftp_users 4096 Sep 12  2022 upload
+drwxr-xr-x.  14 root     root        167 Mar  9  2020 usr
+drwxr-xr-x.  22 root     root       4096 Jun 29  2022 var
+
+Warning Production!
+root@MSPL-DDEFTP-A01 / # cd data/certs
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # ls
+7cast.7-11.com                                   7exp-app-dev.7-eleven.com                         dde-dremio-dev.7-eleven.com_bkp
+7cast.7-11.com_bkp_09232022                      7exp-store-api.7-11.com                           dde-dremio-dev.7-eleven.com_bkp_04072023
+7cast-api.7-11.com                               7exp-store-api-dev.7-11.com                       dde-dremio-dev.7-eleven.com-bkp1
+7cast-api.7-11.com_bkp_09232022                  7exp-store-api-dev.7-eleven.com                   dde-jupyter-dev.7-eleven.com
+7cast-api.7-Eleven.com                           7gov-dev.7-11.com                                 dde-optimizer.7-Eleven.com
+7cast-api-dev.7-11.com                           7gov-dev.7-11.com.bkp                             dde-optimizer.7-Eleven.com_bkp_08292022
+7cast-api-dev.7-11.com_bkp_07252022              7gov-dev.7-11.com_bkp_07072021                    dde-rasa-ai-dev.7-eleven.com
+7cast-api-dev.7-eleven.com                       7gov-dev.7-11.com_bkp_07272020                    dde-sonarqube.7-Eleven.com
+7cast-dev.7-11.com                               7gov-dev.7-11.com_bkp_28062023                    dde-sonarqube.7-Eleven.com_bkp_27052020
+7cast-dev.7-11.com_bkp_07252022                  7thsense.7-11.com                                 forecastaiapi-prod.7-Eleven_bkp_22102019.com
+7cast-dev.7-11.com_bkp_11072023                  backup                                            forecastaiapi-prod.7-Eleven.com
+7cast-dev.7-eleven.com                           data-audit.7-11_bkp_2012020.com                   forecastaiapi-prod.7-Eleven.com_bkp_10082020
+7dataassure.7-11.com                             data-audit.7-11.com                               forecastaiapi-test.7-Eleven.com
+7dataassure.7-11.com_bkp_05092023                data-audit.7-11.com_bkp_12142022                  forecastaiapi-test.7-Eleven.com_bkp_10082020
+7dataassure.7-11.com_bkp_05162022                data-audit.7-11.com_bkp_12212020                  forecastaiapi-test.7-Eleven.com.bkp.10182019
+7dataassure-dev.7-11.com                         data-audit.7-11.com_bkp_12222021                  landingportal-dev.7-11.com
+7dataassure-dev.7-11.com_bkp_11022022            data-audit-dev.7-11_bkp_05122019.com              loyaltyaiapi-prod.7-Eleven_bkp_06012020.com
+7dataassure-dev.7-11.com_bkp_11092021            data-audit-dev.7-11.com                           loyaltyaiapi-prod.7-Eleven.com
+7dataassure-dev.7-eleven.com                     data-audit-dev.7-11.com_bkp_12212020              loyaltyaiapi-prod.7-Eleven.com_bkp_12102020
+7dataassure-forms.7-Eleven.com                   dde-7eye-dev.7-11.com                             loyaltyaiapi-test.7-Eleven.com
+7dataassure-forms.7-Eleven.com.bkp               dde-7eye-dev.7-eleven.com                         loyaltyaiapi-test.7-Eleven.com_bkp_12102020
+7dataassure-forms.7-Eleven.com_bkp_07252022      dde-astro-af.7-eleven.com                         loyaltyaiapi-test.7-Eleven.com_bkp_9Jan2020
+7dataassure-forms.7-Eleven.com_bkp_10292021      dde-astro-af.7-eleven.com_backup091022            nudge360-predev.7-11.com
+7dataassure-forms.7-Eleven.com_bkp_11072023      dde-astro-af-dev.7-eleven.com                     personalizationapi-prod.7-Eleven_bkp_22102019.com
+7dataassure-forms.7-Eleven.com_bkp_11102020      dde-astro-af-dev.7-eleven.com_bkp_06132023        personalizationapi-prod.7-Eleven.com
+7dataassure-forms-dev.7-Eleven.com               dde-astro-af-dev.7-eleven.com.bkp20220628         personalizationapi-prod.7-Eleven.com_bkp_10222020
+7dataassure-forms-dev.7-Eleven.com_bkp_07252022  dde-astro-af-dev.7-eleven-revokelater.com         personalizationapi-test.7-Eleven_bkp_22102019.com
+7dataassure-forms-dev.7-Eleven.com_bkp_10292021  dde-code-validator-api-dev.7-11.com               personalizationapi-test.7-Eleven.com
+7dataassure-forms-dev.7-Eleven.com_bkp_11072023  dde-code-validator-api-dev.7-11.com_bkp_04042023  personalizationapi-test.7-Eleven.com_bkup_10152020
+7dataassure-forms-dev.7-Eleven.com_bkp_11102020  dde-code-validator-api-dev.7-eleven.com           product-master.7-11.com
+7dataassure-forms-predev.7-eleven.com            dde-code-validator-dev.7-11.com                   product-master-dev.7-11.com
+7dataassure-predev.7-11.com                      dde-code-validator-dev.7-11.com_bkp_04042023      site-master.7-11.com
+7exp.7-11.com                                    dde-code-validator-dev.7-eleven.com               site-master.7-11.com_bkp_03242023
+7exp.7-11.com_bkp_03072023                       dde-dremio.7-eleven.com                           site-master.7-11.com_bkp03312022
+7exp-api.7-11.com                                dde-dremio.7-eleven.com-08022022                  site-master-dev.7-11.com
+7exp-api.7-11.com_bkp_03072023                   dde-dremio.7-eleven.com-08162022                  site-master-dev.7-11.com_bkp_03242023
+7exp-api-dev.7-11.com                            dde-dremio.7-eleven.com_bkp_05072023              site-master-dev.7-11.com_bkp_03312022
+7exp-api-dev.7-11.com_bkp_10142022               dde-dremio.7-eleven.com_bkp_07252022              site-master-dev.7-eleven.com
+7exp-api-dev.7-eleven.com                        dde-dremio-dev.7-eleven.com                       test
+7exp-app-dev.7-11.com                            dde-dremio-dev.7-eleven.com-080122                test-7-11.com
+7exp-app-dev.7-11.com_bkp_10182022               dde-dremio-dev.7-eleven.com-08162022              thoughtspot-dev.7-11_bkp_28102019.com
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # cd 7cast-dev.7-11.com
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # ls
+7cast-dev.7-11.com.csr  7cast-dev.7-11.com.key
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com #
+login as: rrai3014@7-11.com
+rrai3014@7-11.com@172.22.143.100's password:
+Last login: Fri Jul 14 04:35:13 2023 from 172.16.56.62
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [99] :
+ ~$ ls
+7cast-dev.7-11.com.csr  7dataassure-forms.7-Eleven.com.csr
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [100] :
+ ~$ broot -i
+[sudo] password for rrai3014@7-11.com:
+Script started, file is /var/brootlogs/rrai3014@7-11.com.2307140510
+
+Warning Production!
+root@MSPL-DDEFTP-A01 ~ # ls
+bridg      dead.letter        fadlg2proddlake001          kube-state-metrics-release-1.3                                         schema.html
+bridg.pub  Dockerfile         get_helm.sh                 output.txt                                                             schema.json
+chetan     dremio             kubectl-root-in-host.sh     pingtest_pass.out                                                      sftp_experian_dev
+conf       fadlg2devdlake001  kube-state-metrics-1.3.zip  RG-DEV-FADL_AKS-Cluster_aksd-fadl-001_config_2020-12-01_23-41-33.json  spark-on-k8s
+
+Warning Production!
+root@MSPL-DDEFTP-A01 ~ # cd /
+
+Warning Production!
+root@MSPL-DDEFTP-A01 / # cd data/certs
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # ls
+7cast.7-11.com                                   7exp-app-dev.7-eleven.com                         dde-dremio-dev.7-eleven.com_bkp
+7cast.7-11.com_bkp_09232022                      7exp-store-api.7-11.com                           dde-dremio-dev.7-eleven.com_bkp_04072023
+7cast-api.7-11.com                               7exp-store-api-dev.7-11.com                       dde-dremio-dev.7-eleven.com-bkp1
+7cast-api.7-11.com_bkp_09232022                  7exp-store-api-dev.7-eleven.com                   dde-jupyter-dev.7-eleven.com
+7cast-api.7-Eleven.com                           7gov-dev.7-11.com                                 dde-optimizer.7-Eleven.com
+7cast-api-dev.7-11.com                           7gov-dev.7-11.com.bkp                             dde-optimizer.7-Eleven.com_bkp_08292022
+7cast-api-dev.7-11.com_bkp_07252022              7gov-dev.7-11.com_bkp_07072021                    dde-rasa-ai-dev.7-eleven.com
+7cast-api-dev.7-eleven.com                       7gov-dev.7-11.com_bkp_07272020                    dde-sonarqube.7-Eleven.com
+7cast-dev.7-11.com                               7gov-dev.7-11.com_bkp_28062023                    dde-sonarqube.7-Eleven.com_bkp_27052020
+7cast-dev.7-11.com_bkp_07252022                  7thsense.7-11.com                                 forecastaiapi-prod.7-Eleven_bkp_22102019.com
+7cast-dev.7-11.com_bkp_11072023                  backup                                            forecastaiapi-prod.7-Eleven.com
+7cast-dev.7-eleven.com                           data-audit.7-11_bkp_2012020.com                   forecastaiapi-prod.7-Eleven.com_bkp_10082020
+7dataassure.7-11.com                             data-audit.7-11.com                               forecastaiapi-test.7-Eleven.com
+7dataassure.7-11.com_bkp_05092023                data-audit.7-11.com_bkp_12142022                  forecastaiapi-test.7-Eleven.com_bkp_10082020
+7dataassure.7-11.com_bkp_05162022                data-audit.7-11.com_bkp_12212020                  forecastaiapi-test.7-Eleven.com.bkp.10182019
+7dataassure-dev.7-11.com                         data-audit.7-11.com_bkp_12222021                  landingportal-dev.7-11.com
+7dataassure-dev.7-11.com_bkp_11022022            data-audit-dev.7-11_bkp_05122019.com              loyaltyaiapi-prod.7-Eleven_bkp_06012020.com
+7dataassure-dev.7-11.com_bkp_11092021            data-audit-dev.7-11.com                           loyaltyaiapi-prod.7-Eleven.com
+7dataassure-dev.7-eleven.com                     data-audit-dev.7-11.com_bkp_12212020              loyaltyaiapi-prod.7-Eleven.com_bkp_12102020
+7dataassure-forms.7-Eleven.com                   dde-7eye-dev.7-11.com                             loyaltyaiapi-test.7-Eleven.com
+7dataassure-forms.7-Eleven.com.bkp               dde-7eye-dev.7-eleven.com                         loyaltyaiapi-test.7-Eleven.com_bkp_12102020
+7dataassure-forms.7-Eleven.com_bkp_07252022      dde-astro-af.7-eleven.com                         loyaltyaiapi-test.7-Eleven.com_bkp_9Jan2020
+7dataassure-forms.7-Eleven.com_bkp_10292021      dde-astro-af.7-eleven.com_backup091022            nudge360-predev.7-11.com
+7dataassure-forms.7-Eleven.com_bkp_11072023      dde-astro-af-dev.7-eleven.com                     personalizationapi-prod.7-Eleven_bkp_22102019.com
+7dataassure-forms.7-Eleven.com_bkp_11102020      dde-astro-af-dev.7-eleven.com_bkp_06132023        personalizationapi-prod.7-Eleven.com
+7dataassure-forms-dev.7-Eleven.com               dde-astro-af-dev.7-eleven.com.bkp20220628         personalizationapi-prod.7-Eleven.com_bkp_10222020
+7dataassure-forms-dev.7-Eleven.com_bkp_07252022  dde-astro-af-dev.7-eleven-revokelater.com         personalizationapi-test.7-Eleven_bkp_22102019.com
+7dataassure-forms-dev.7-Eleven.com_bkp_10292021  dde-code-validator-api-dev.7-11.com               personalizationapi-test.7-Eleven.com
+7dataassure-forms-dev.7-Eleven.com_bkp_11072023  dde-code-validator-api-dev.7-11.com_bkp_04042023  personalizationapi-test.7-Eleven.com_bkup_10152020
+7dataassure-forms-dev.7-Eleven.com_bkp_11102020  dde-code-validator-api-dev.7-eleven.com           product-master.7-11.com
+7dataassure-forms-predev.7-eleven.com            dde-code-validator-dev.7-11.com                   product-master-dev.7-11.com
+7dataassure-predev.7-11.com                      dde-code-validator-dev.7-11.com_bkp_04042023      site-master.7-11.com
+7exp.7-11.com                                    dde-code-validator-dev.7-eleven.com               site-master.7-11.com_bkp_03242023
+7exp.7-11.com_bkp_03072023                       dde-dremio.7-eleven.com                           site-master.7-11.com_bkp03312022
+7exp-api.7-11.com                                dde-dremio.7-eleven.com-08022022                  site-master-dev.7-11.com
+7exp-api.7-11.com_bkp_03072023                   dde-dremio.7-eleven.com-08162022                  site-master-dev.7-11.com_bkp_03242023
+7exp-api-dev.7-11.com                            dde-dremio.7-eleven.com_bkp_05072023              site-master-dev.7-11.com_bkp_03312022
+7exp-api-dev.7-11.com_bkp_10142022               dde-dremio.7-eleven.com_bkp_07252022              site-master-dev.7-eleven.com
+7exp-api-dev.7-eleven.com                        dde-dremio-dev.7-eleven.com                       test
+7exp-app-dev.7-11.com                            dde-dremio-dev.7-eleven.com-080122                test-7-11.com
+7exp-app-dev.7-11.com_bkp_10182022               dde-dremio-dev.7-eleven.com-08162022              thoughtspot-dev.7-11_bkp_28102019.com
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # cd 7cast-dev.7-11.com
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # ls
+7cast-dev.7-11.com.csr  7cast-dev.7-11.com.key
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # ls
+7cast-dev.7-11.com.csr  7cast-dev.7-11.com.key
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # cp /home/rrai3014@7-11.com/7cast-dev.7-11.com.p7b.
+cp: missing destination file operand after ‘/home/rrai3014@7-11.com/7cast-dev.7-11.com.p7b.’
+Try 'cp --help' for more information.
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # cp /home/rrai3014@7-11.com/dde-optimizer.7-eleven.com.p7b .
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # ls -l
+total 16
+-rw-r--r-- 1 root root 1062 Jul 11 04:00 7cast-dev.7-11.com.csr
+-rw-r--r-- 1 root root 1675 Jul 11 03:54 7cast-dev.7-11.com.key
+-rw-r--r-- 1 root root 4760 Jul 14 05:17 7cast-dev.7-11.com.p7b
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # openssl pkcs7 -print_certs -inform der -in  7cast-dev.7-11.com.p7b -out  7cast-dev.7-11.com.crt
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # ls -l
+total 24
+-rw-r--r-- 1 root root 6824 Jul 14 05:21 7cast-dev.7-11.com.crt
+-rw-r--r-- 1 root root 1062 Jul 11 04:00 7cast-dev.7-11.com.csr
+-rw-r--r-- 1 root root 1675 Jul 11 03:54 7cast-dev.7-11.com.key
+-rw-r--r-- 1 root root 4760 Jul 14 05:17 7cast-dev.7-11.com.p7b
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # cat 7cast-dev.7-11.com.crt
+subject=/C=com/O=7-11/CN=7Root
+issuer=/C=com/O=7-11/CN=7Root
+-----BEGIN CERTIFICATE-----
+MIIFWjCCA0KgAwIBAgIQMJ6XKP3u5r1Mgrb3JHtsfzANBgkqhkiG9w0BAQsFADAt
+MQwwCgYDVQQGEwNjb20xDTALBgNVBAoTBDctMTExDjAMBgNVBAMTBTdSb290MB4X
+DTE3MDgxNTE2MjYyMVoXDTQwMDYyMzE2MDExNFowLTEMMAoGA1UEBhMDY29tMQ0w
+CwYDVQQKEwQ3LTExMQ4wDAYDVQQDEwU3Um9vdDCCAiIwDQYJKoZIhvcNAQEBBQAD
+ggIPADCCAgoCggIBAO3JXXOfoGHPsc7NEYoDMG5rFSAnqBC+YgyvymJMyJICsfkr
+8suD9Swm7wki+u+KkKVuOVPYJpAD9s/iGDafSbvctyyrwGKEEGW/KZxqzQkt9u4R
++KV1zDSy0YctKfgNgzymOppqw4BG+S0nKqlCnGLJZY+OBLCSKnZImrEWTjFdt1IM
+KIC3rhaHWT9nwktHuVgGMs3gWe1FMCYcOVlb56VVUFMwY3YSch0mOWzjtQpHqQD+
+ULWOC2ZtSAA8F6ILqw+jG3RmspIvr1Ej7AXpSCOQYPVjGpFyEmH+03pdlxsWRG/s
+DY8QJNlIAIG/rW+7Y6HIN1DbJNUa9mb4ZCTI7Z90RsP35g5uPlPyRDWpFzib/Mxv
+7PQIKn0wvkjAbSlG4dN0/NNKCYKOfBMFSIbVCaQ43Q3U9EIFNmidKPP3wHHSc6xw
+6tAie9q95XIqoWni3/4XH39SnbwBM3ezENCRWFcYp8xQYqbtG8m0n8OwMmIbXQhT
+phcwuc8w6MFOE3TuJDVqTyuz209Vb/5tFLDqEuEn168huluv7TEuuAvgYXPD4lxD
+b9eExCn/3YnhKQjgdO4c46gP9uS6+T3qc40syqxIyG5rH4+7+P9BtMnkdlpcSgBD
+XpwvxYAqSfNuE0NVaYq2ihjJ366TpB8a5JBvjuz2aahd3dJd4WambSLFbo2VAgMB
+AAGjdjB0MAsGA1UdDwQEAwIBhjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBSk
+6UplTVxEoB3pnPniIRdajwpL2jAQBgkrBgEEAYI3FQEEAwIBATAjBgkrBgEEAYI3
+FQIEFgQUq3ri5H8tUQ1weGoVCeVx9blYZuYwDQYJKoZIhvcNAQELBQADggIBACyu
+iTuEECsBofv+ktUCEbTUfkvScocJHzIm2zMRCEwou/o7coGjhkcaKW5LGhlYyDRf
+TXh91pdo+iLYQQShqtP8kIVd1JmHX3iRXBfoWWkZrSgt7MwS/pjHgVNdfK9zdIBm
+pCiEGfoP4/OXWe+7LUvmT7l29AhDHHweglRyktExFnjr8QEi0eU5O+3+MYM7gJq4
+i6k2BHMrNudSvFfEKyT9VGLBa780f+fln5vKRuUocj7ry7uuM3PGyY1DRU5QNiwJ
+zmhj2FixeiYJujkwxJlHNMuYeOZcxb79KIZ70eIdoo1SQLfPlk/KyIdYp+BK/+I4
+LU53l0sCuGhoB9l3YZa0OAtEXtKx22/NtmF8GkgXGv91gE/HzGqTV9YyEkLfbCSe
+3w+JuKCfUca7fIyyxEAwO6RMFQXiYnVlkW6nhsT8iF8ZjvHRrnoUm79nNRgD+egW
+ijfazMsOKUfkYdI3pTH+bvrcrVsMMjvRGnLjEHT6nQqEhKNNP0ZW6w1Ofj7PkFDR
+Qm+sXCpWK1FdfYavlzP4ytoyeabnT6FYayK8eAF70vD33g+60bfIjK2AFKM+xNc2
+0TeWSsMsBOZ4XJhlcQd8LND6UZbV0KeRgs24xR8SdfUVe2Aoqxa5sS0i5hNOPimF
+Qq18XoHKVnQoUpaftlK4+9ZNXaG8t4qnS1NGayvI
+-----END CERTIFICATE-----
+
+subject=/DC=com/DC=7-11/CN=7Issuing1
+issuer=/C=com/O=7-11/CN=7Root
+-----BEGIN CERTIFICATE-----
+MIIGoDCCBIigAwIBAgITVwAAAA2LX1FBwR1G8QABAAAADTANBgkqhkiG9w0BAQsF
+ADAtMQwwCgYDVQQGEwNjb20xDTALBgNVBAoTBDctMTExDjAMBgNVBAMTBTdSb290
+MB4XDTIwMDYyMzE2NDEwN1oXDTI1MDYyMzE2NTEwN1owPzETMBEGCgmSJomT8ixk
+ARkWA2NvbTEUMBIGCgmSJomT8ixkARkWBDctMTExEjAQBgNVBAMTCTdJc3N1aW5n
+MTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALNwJnTw7M4l6j1OhAdt
+MDvRVDQ/FEwlADjz6GO2YwEfECzRG4skvRyMhi0psW8/yaijebiMR3HtJ39Y+Ndd
+rmJbkIiSPIWG5VzYtImgKXZWDC/tes147mJPA6p54XiCDxW6FZnJUPGENLbmdKi9
+orerYC/jQzuX5hzR1soRxdDCrLmM+LO0zxwxVcEwxbBjvx0/riqVxWdSmCCrAtkq
+ljO7iqqnXrYCgTBYk/WVwX8JI0a9s/8miEt0w1Y/GKe+EWeW+/dmvkFqmEU7KPx9
+xvZ0xz0A/CyCoFAsF4hgjunPc3Dql/AqVZZQXS2zV4wj8endsP1M2EOaNdRWgvGd
+ZxECAwEAAaOCAqUwggKhMBAGCSsGAQQBgjcVAQQDAgECMCMGCSsGAQQBgjcVAgQW
+BBRYB4+k0LPsRm3m2ZogX5iYzX2uBzAdBgNVHQ4EFgQUevdsm98TzVTj+3QqM9x7
+E3sibxAwGQYJKwYBBAGCNxQCBAweCgBTAHUAYgBDAEEwCwYDVR0PBAQDAgGGMA8G
+A1UdEwEB/wQFMAMBAf8wHwYDVR0jBBgwFoAUpOlKZU1cRKAd6Zz54iEXWo8KS9ow
+gfAGA1UdHwSB6DCB5TCB4qCB36CB3IYoaHR0cDovLzdlbGV2ZW5wa2kuNy0xMS5j
+b20vQ1JMLzdSb290LmNybIaBr2xkYXA6Ly8vQ049N1Jvb3QsQ049dXN0eGFsYXJ0
+Y2EwMSxDTj1DRFAsQ049cHVibGljJTIwa2V5JTIwc2VydmljZXMsQ049c2Vydmlj
+ZXMsQ049Q29uZmlndXJhdGlvbixEQz03LTExLERDPWNvbT9jZXJ0aWZpY2F0ZVJl
+dm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJpYnV0aW9uUG9p
+bnQwgfsGCCsGAQUFBwEBBIHuMIHrMEUGCCsGAQUFBzAChjlodHRwOi8vN2VsZXZl
+bnBraS43LTExLmNvbS9BSUEvdXN0eGFsYXJ0Y2EwMV83Um9vdCgxKS5jcnQwgaEG
+CCsGAQUFBzAChoGUbGRhcDovLy9DTj03Um9vdCxDTj1BSUEsQ049cHVibGljJTIw
+a2V5JTIwc2VydmljZXMsQ049c2VydmljZXMsQ049Q29uZmlndXJhdGlvbixEQz03
+LTExLERDPWNvbT9jQUNlcnRpZmljYXRlP2Jhc2U/b2JqZWN0Q2xhc3M9Y2VydGlm
+aWNhdGlvbkF1dGhvcml0eTANBgkqhkiG9w0BAQsFAAOCAgEAeo6Mw77wksq9moIs
+YIow62IRAdON8EHfCmCayC9BklavevOY5UhG4cA+tJvixJnuGFPf69nqwCK6rYGV
+7gI0sCeraylQEvksIwwcmkBimTHXMTUEMJq5p6jOkQdK+xIJ/Skkq5ZQIZJDJXgl
+ets4EhjM0t6XfKccaltJC82AiDJNx5wuhaImSt1t/+8yIU82h9sQiQ6fKboCP+uf
+VjHG9SBBaIGm7BFyGfHF+4NddzINznJCsZtnFIG50wAr4cN4znZszPtuKSDWgwMn
+uTMTlSeaT78QySueAmgwj8H2FSSymZnC8Qt0nArY4VFfLYhzadUGCgLdmbQ1jtFs
+yqHT9IypHWxVcQ5CAhZmx0RUs9Q4/0i5ssawwKyQNT0z20wS13gY6jJJ1PXxKUxE
+1J1tPB47V/mtYp+E4fCjqi2k0yaMhMYedR46ntciYHYEDYViLum5ON6xUC7aMLwp
+dgq/ZG+dvewOH/RFkJtMqiwZJGwz3j6WFrSMZ7wyyyG0lz0+vv6f0qmeyiavaIgD
+DrvjIyba1vIogl4BM2y6o7JQMaa2AZGZc1oPtAAqQcvCE59pH4MbX55ki0dawkJV
+KiLXa5NRVSg0dCl4PHgoYtnpx+735PaeQZZ+eqxOwO29BI8enF9zlY3luL4qni+p
+t253MgcMPckDXDrrKa+zyUnd0EU=
+-----END CERTIFICATE-----
+
+subject=/C=US/ST=Texas/L=Irving/O=7-Eleven,Inc./OU=IT/CN=7cast-dev.7-11.com/emailAddress=rrai3014@7-11.com
+issuer=/DC=com/DC=7-11/CN=7Issuing1
+-----BEGIN CERTIFICATE-----
+MIIGYzCCBUugAwIBAgITSQAAQDYqKBFR9Q7/2QACAABANjANBgkqhkiG9w0BAQsF
+ADA/MRMwEQYKCZImiZPyLGQBGRYDY29tMRQwEgYKCZImiZPyLGQBGRYENy0xMTES
+MBAGA1UEAxMJN0lzc3VpbmcxMB4XDTIzMDcxMTEzNTExOVoXDTI0MDcxMDEzNTEx
+OVowgZIxCzAJBgNVBAYTAlVTMQ4wDAYDVQQIEwVUZXhhczEPMA0GA1UEBxMGSXJ2
+aW5nMRYwFAYDVQQKEw03LUVsZXZlbixJbmMuMQswCQYDVQQLEwJJVDEbMBkGA1UE
+AxMSN2Nhc3QtZGV2LjctMTEuY29tMSAwHgYJKoZIhvcNAQkBFhFycmFpMzAxNEA3
+LTExLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM4mZvt/8Eej
+qJxMQlDOr3vtyiWKjlC7h++KI4YDgCBQL6QATrgmf5KAT+sYJlkdh2XalN0w9W/P
+bvlCSixLnsDCVn/MsmrLfJK8hZdaiBrut3SAv5mKvX5MSLvh3N9LrpNjN2R9JtwS
+qmx+TZ6CbCa41QG2zrhblN+6FZVrIHLISSWGpgotMoq3m7GzCFQd+OxbVdPzRa0M
+qkVLLAzfRXsjcmxIsZXEZFSP29eOi9O4JEu5K4Jv4DZI0YzxeUpmhilNiMp0nNK/
+R9BBUc6WGyzSGx2wj0dhUPsAtSZFqNwH+W+2FUVX4j0tHSSHbL7PW9mKkupC2rAU
+5jrQ66i8v0kCAwEAAaOCAwIwggL+MB0GA1UdDgQWBBTCWWC7tA7CBO1PuSMUA5y9
+mDXWajAfBgNVHSMEGDAWgBR692yb3xPNVOP7dCoz3HsTeyJvEDCB+AYDVR0fBIHw
+MIHtMIHqoIHnoIHkhixodHRwOi8vN2VsZXZlbnBraS43LTExLmNvbS9DUkwvN0lz
+c3VpbmcxLmNybIaBs2xkYXA6Ly8vQ049N0lzc3VpbmcxLENOPXVzdHhhbGFpc2Nh
+MDEsQ049Q0RQLENOPXB1YmxpYyUyMGtleSUyMHNlcnZpY2VzLENOPXNlcnZpY2Vz
+LENOPUNvbmZpZ3VyYXRpb24sREM9Ny0xMSxEQz1jb20/Y2VydGlmaWNhdGVSZXZv
+Y2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50
+MIIBDAYIKwYBBQUHAQEEgf8wgfwwUgYIKwYBBQUHMAKGRmh0dHA6Ly83ZWxldmVu
+cGtpLjctMTEuY29tL0FJQS91c3R4YWxhaXNjYTAxLjctMTEuY29tXzdJc3N1aW5n
+MSgyKS5jcnQwgaUGCCsGAQUFBzAChoGYbGRhcDovLy9DTj03SXNzdWluZzEsQ049
+QUlBLENOPXB1YmxpYyUyMGtleSUyMHNlcnZpY2VzLENOPXNlcnZpY2VzLENOPUNv
+bmZpZ3VyYXRpb24sREM9Ny0xMSxEQz1jb20/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29i
+amVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkwCwYDVR0PBAQDAgWgMD0G
+CSsGAQQBgjcVBwQwMC4GJisGAQQBgjcVCITAh0aBuppAlZELgbbIQIGi6ViBN4O/
+sFKF0Yw4AgFkAgEcMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAnBgkr
+BgEEAYI3FQoEGjAYMAoGCCsGAQUFBwMBMAoGCCsGAQUFBwMCMB0GA1UdEQQWMBSC
+EjdjYXN0LWRldi43LTExLmNvbTANBgkqhkiG9w0BAQsFAAOCAQEAGqiy8kG9xEhD
+SjtdhzlSbvdmFeUe7iWCnjAyUUastRh/WBCNwLvFJsPH8gR00eUQUGOj8nVwvLOZ
+EmxAeV27UmMR0BsyveNpq6xGmtHrReM2/GGn15BLm3moYN2BPezCQK1XR37kkMY0
+jhqHKGBHZFf1HaIMQA7z4iYRDeLKpLc7K2Qh6d52I9ZXt4yGp35WCQGRw8DhdEO+
+dxE3uyxbwcEaJ6y16Y/AZkwSJchgfT2O2pxOls9ushKq/sPFEOpdHBSTPvSaHb29
+m3oHqQ0VnsY7Jk+WzcTKpGcf2dk/Tz4zXYcs0xN+aSVbzS9k07gI6HlTlsClqhpS
+TYx4wpXY4g==
+-----END CERTIFICATE-----
+
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # vi 7cast-dev.7-11.com.crt
+
+[1]+  Stopped                 vim 7cast-dev.7-11.com.crt
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # ls -l
+total 24
+-rw-r--r-- 1 root root 6824 Jul 14 05:21 7cast-dev.7-11.com.crt
+-rw-r--r-- 1 root root 1062 Jul 11 04:00 7cast-dev.7-11.com.csr
+-rw-r--r-- 1 root root 1675 Jul 11 03:54 7cast-dev.7-11.com.key
+-rw-r--r-- 1 root root 4760 Jul 14 05:17 7cast-dev.7-11.com.p7b
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # cat 7cast-dev.7-11.com.crt
+subject=/C=com/O=7-11/CN=7Root
+issuer=/C=com/O=7-11/CN=7Root
+-----BEGIN CERTIFICATE-----
+MIIFWjCCA0KgAwIBAgIQMJ6XKP3u5r1Mgrb3JHtsfzANBgkqhkiG9w0BAQsFADAt
+MQwwCgYDVQQGEwNjb20xDTALBgNVBAoTBDctMTExDjAMBgNVBAMTBTdSb290MB4X
+DTE3MDgxNTE2MjYyMVoXDTQwMDYyMzE2MDExNFowLTEMMAoGA1UEBhMDY29tMQ0w
+CwYDVQQKEwQ3LTExMQ4wDAYDVQQDEwU3Um9vdDCCAiIwDQYJKoZIhvcNAQEBBQAD
+ggIPADCCAgoCggIBAO3JXXOfoGHPsc7NEYoDMG5rFSAnqBC+YgyvymJMyJICsfkr
+8suD9Swm7wki+u+KkKVuOVPYJpAD9s/iGDafSbvctyyrwGKEEGW/KZxqzQkt9u4R
++KV1zDSy0YctKfgNgzymOppqw4BG+S0nKqlCnGLJZY+OBLCSKnZImrEWTjFdt1IM
+KIC3rhaHWT9nwktHuVgGMs3gWe1FMCYcOVlb56VVUFMwY3YSch0mOWzjtQpHqQD+
+ULWOC2ZtSAA8F6ILqw+jG3RmspIvr1Ej7AXpSCOQYPVjGpFyEmH+03pdlxsWRG/s
+DY8QJNlIAIG/rW+7Y6HIN1DbJNUa9mb4ZCTI7Z90RsP35g5uPlPyRDWpFzib/Mxv
+7PQIKn0wvkjAbSlG4dN0/NNKCYKOfBMFSIbVCaQ43Q3U9EIFNmidKPP3wHHSc6xw
+6tAie9q95XIqoWni3/4XH39SnbwBM3ezENCRWFcYp8xQYqbtG8m0n8OwMmIbXQhT
+phcwuc8w6MFOE3TuJDVqTyuz209Vb/5tFLDqEuEn168huluv7TEuuAvgYXPD4lxD
+b9eExCn/3YnhKQjgdO4c46gP9uS6+T3qc40syqxIyG5rH4+7+P9BtMnkdlpcSgBD
+XpwvxYAqSfNuE0NVaYq2ihjJ366TpB8a5JBvjuz2aahd3dJd4WambSLFbo2VAgMB
+AAGjdjB0MAsGA1UdDwQEAwIBhjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBSk
+6UplTVxEoB3pnPniIRdajwpL2jAQBgkrBgEEAYI3FQEEAwIBATAjBgkrBgEEAYI3
+FQIEFgQUq3ri5H8tUQ1weGoVCeVx9blYZuYwDQYJKoZIhvcNAQELBQADggIBACyu
+iTuEECsBofv+ktUCEbTUfkvScocJHzIm2zMRCEwou/o7coGjhkcaKW5LGhlYyDRf
+TXh91pdo+iLYQQShqtP8kIVd1JmHX3iRXBfoWWkZrSgt7MwS/pjHgVNdfK9zdIBm
+pCiEGfoP4/OXWe+7LUvmT7l29AhDHHweglRyktExFnjr8QEi0eU5O+3+MYM7gJq4
+i6k2BHMrNudSvFfEKyT9VGLBa780f+fln5vKRuUocj7ry7uuM3PGyY1DRU5QNiwJ
+zmhj2FixeiYJujkwxJlHNMuYeOZcxb79KIZ70eIdoo1SQLfPlk/KyIdYp+BK/+I4
+LU53l0sCuGhoB9l3YZa0OAtEXtKx22/NtmF8GkgXGv91gE/HzGqTV9YyEkLfbCSe
+3w+JuKCfUca7fIyyxEAwO6RMFQXiYnVlkW6nhsT8iF8ZjvHRrnoUm79nNRgD+egW
+ijfazMsOKUfkYdI3pTH+bvrcrVsMMjvRGnLjEHT6nQqEhKNNP0ZW6w1Ofj7PkFDR
+Qm+sXCpWK1FdfYavlzP4ytoyeabnT6FYayK8eAF70vD33g+60bfIjK2AFKM+xNc2
+0TeWSsMsBOZ4XJhlcQd8LND6UZbV0KeRgs24xR8SdfUVe2Aoqxa5sS0i5hNOPimF
+Qq18XoHKVnQoUpaftlK4+9ZNXaG8t4qnS1NGayvI
+-----END CERTIFICATE-----
+
+subject=/DC=com/DC=7-11/CN=7Issuing1
+issuer=/C=com/O=7-11/CN=7Root
+-----BEGIN CERTIFICATE-----
+MIIGoDCCBIigAwIBAgITVwAAAA2LX1FBwR1G8QABAAAADTANBgkqhkiG9w0BAQsF
+ADAtMQwwCgYDVQQGEwNjb20xDTALBgNVBAoTBDctMTExDjAMBgNVBAMTBTdSb290
+MB4XDTIwMDYyMzE2NDEwN1oXDTI1MDYyMzE2NTEwN1owPzETMBEGCgmSJomT8ixk
+ARkWA2NvbTEUMBIGCgmSJomT8ixkARkWBDctMTExEjAQBgNVBAMTCTdJc3N1aW5n
+MTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALNwJnTw7M4l6j1OhAdt
+MDvRVDQ/FEwlADjz6GO2YwEfECzRG4skvRyMhi0psW8/yaijebiMR3HtJ39Y+Ndd
+rmJbkIiSPIWG5VzYtImgKXZWDC/tes147mJPA6p54XiCDxW6FZnJUPGENLbmdKi9
+orerYC/jQzuX5hzR1soRxdDCrLmM+LO0zxwxVcEwxbBjvx0/riqVxWdSmCCrAtkq
+ljO7iqqnXrYCgTBYk/WVwX8JI0a9s/8miEt0w1Y/GKe+EWeW+/dmvkFqmEU7KPx9
+xvZ0xz0A/CyCoFAsF4hgjunPc3Dql/AqVZZQXS2zV4wj8endsP1M2EOaNdRWgvGd
+ZxECAwEAAaOCAqUwggKhMBAGCSsGAQQBgjcVAQQDAgECMCMGCSsGAQQBgjcVAgQW
+BBRYB4+k0LPsRm3m2ZogX5iYzX2uBzAdBgNVHQ4EFgQUevdsm98TzVTj+3QqM9x7
+E3sibxAwGQYJKwYBBAGCNxQCBAweCgBTAHUAYgBDAEEwCwYDVR0PBAQDAgGGMA8G
+A1UdEwEB/wQFMAMBAf8wHwYDVR0jBBgwFoAUpOlKZU1cRKAd6Zz54iEXWo8KS9ow
+gfAGA1UdHwSB6DCB5TCB4qCB36CB3IYoaHR0cDovLzdlbGV2ZW5wa2kuNy0xMS5j
+b20vQ1JMLzdSb290LmNybIaBr2xkYXA6Ly8vQ049N1Jvb3QsQ049dXN0eGFsYXJ0
+Y2EwMSxDTj1DRFAsQ049cHVibGljJTIwa2V5JTIwc2VydmljZXMsQ049c2Vydmlj
+ZXMsQ049Q29uZmlndXJhdGlvbixEQz03LTExLERDPWNvbT9jZXJ0aWZpY2F0ZVJl
+dm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJpYnV0aW9uUG9p
+bnQwgfsGCCsGAQUFBwEBBIHuMIHrMEUGCCsGAQUFBzAChjlodHRwOi8vN2VsZXZl
+bnBraS43LTExLmNvbS9BSUEvdXN0eGFsYXJ0Y2EwMV83Um9vdCgxKS5jcnQwgaEG
+CCsGAQUFBzAChoGUbGRhcDovLy9DTj03Um9vdCxDTj1BSUEsQ049cHVibGljJTIw
+a2V5JTIwc2VydmljZXMsQ049c2VydmljZXMsQ049Q29uZmlndXJhdGlvbixEQz03
+LTExLERDPWNvbT9jQUNlcnRpZmljYXRlP2Jhc2U/b2JqZWN0Q2xhc3M9Y2VydGlm
+aWNhdGlvbkF1dGhvcml0eTANBgkqhkiG9w0BAQsFAAOCAgEAeo6Mw77wksq9moIs
+YIow62IRAdON8EHfCmCayC9BklavevOY5UhG4cA+tJvixJnuGFPf69nqwCK6rYGV
+7gI0sCeraylQEvksIwwcmkBimTHXMTUEMJq5p6jOkQdK+xIJ/Skkq5ZQIZJDJXgl
+ets4EhjM0t6XfKccaltJC82AiDJNx5wuhaImSt1t/+8yIU82h9sQiQ6fKboCP+uf
+VjHG9SBBaIGm7BFyGfHF+4NddzINznJCsZtnFIG50wAr4cN4znZszPtuKSDWgwMn
+uTMTlSeaT78QySueAmgwj8H2FSSymZnC8Qt0nArY4VFfLYhzadUGCgLdmbQ1jtFs
+yqHT9IypHWxVcQ5CAhZmx0RUs9Q4/0i5ssawwKyQNT0z20wS13gY6jJJ1PXxKUxE
+1J1tPB47V/mtYp+E4fCjqi2k0yaMhMYedR46ntciYHYEDYViLum5ON6xUC7aMLwp
+dgq/ZG+dvewOH/RFkJtMqiwZJGwz3j6WFrSMZ7wyyyG0lz0+vv6f0qmeyiavaIgD
+DrvjIyba1vIogl4BM2y6o7JQMaa2AZGZc1oPtAAqQcvCE59pH4MbX55ki0dawkJV
+KiLXa5NRVSg0dCl4PHgoYtnpx+735PaeQZZ+eqxOwO29BI8enF9zlY3luL4qni+p
+t253MgcMPckDXDrrKa+zyUnd0EU=
+-----END CERTIFICATE-----
+
+subject=/C=US/ST=Texas/L=Irving/O=7-Eleven,Inc./OU=IT/CN=7cast-dev.7-11.com/emailAddress=rrai3014@7-11.com
+issuer=/DC=com/DC=7-11/CN=7Issuing1
+-----BEGIN CERTIFICATE-----
+MIIGYzCCBUugAwIBAgITSQAAQDYqKBFR9Q7/2QACAABANjANBgkqhkiG9w0BAQsF
+ADA/MRMwEQYKCZImiZPyLGQBGRYDY29tMRQwEgYKCZImiZPyLGQBGRYENy0xMTES
+MBAGA1UEAxMJN0lzc3VpbmcxMB4XDTIzMDcxMTEzNTExOVoXDTI0MDcxMDEzNTEx
+OVowgZIxCzAJBgNVBAYTAlVTMQ4wDAYDVQQIEwVUZXhhczEPMA0GA1UEBxMGSXJ2
+aW5nMRYwFAYDVQQKEw03LUVsZXZlbixJbmMuMQswCQYDVQQLEwJJVDEbMBkGA1UE
+AxMSN2Nhc3QtZGV2LjctMTEuY29tMSAwHgYJKoZIhvcNAQkBFhFycmFpMzAxNEA3
+LTExLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM4mZvt/8Eej
+qJxMQlDOr3vtyiWKjlC7h++KI4YDgCBQL6QATrgmf5KAT+sYJlkdh2XalN0w9W/P
+bvlCSixLnsDCVn/MsmrLfJK8hZdaiBrut3SAv5mKvX5MSLvh3N9LrpNjN2R9JtwS
+qmx+TZ6CbCa41QG2zrhblN+6FZVrIHLISSWGpgotMoq3m7GzCFQd+OxbVdPzRa0M
+qkVLLAzfRXsjcmxIsZXEZFSP29eOi9O4JEu5K4Jv4DZI0YzxeUpmhilNiMp0nNK/
+R9BBUc6WGyzSGx2wj0dhUPsAtSZFqNwH+W+2FUVX4j0tHSSHbL7PW9mKkupC2rAU
+5jrQ66i8v0kCAwEAAaOCAwIwggL+MB0GA1UdDgQWBBTCWWC7tA7CBO1PuSMUA5y9
+mDXWajAfBgNVHSMEGDAWgBR692yb3xPNVOP7dCoz3HsTeyJvEDCB+AYDVR0fBIHw
+MIHtMIHqoIHnoIHkhixodHRwOi8vN2VsZXZlbnBraS43LTExLmNvbS9DUkwvN0lz
+c3VpbmcxLmNybIaBs2xkYXA6Ly8vQ049N0lzc3VpbmcxLENOPXVzdHhhbGFpc2Nh
+MDEsQ049Q0RQLENOPXB1YmxpYyUyMGtleSUyMHNlcnZpY2VzLENOPXNlcnZpY2Vz
+LENOPUNvbmZpZ3VyYXRpb24sREM9Ny0xMSxEQz1jb20/Y2VydGlmaWNhdGVSZXZv
+Y2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50
+MIIBDAYIKwYBBQUHAQEEgf8wgfwwUgYIKwYBBQUHMAKGRmh0dHA6Ly83ZWxldmVu
+cGtpLjctMTEuY29tL0FJQS91c3R4YWxhaXNjYTAxLjctMTEuY29tXzdJc3N1aW5n
+MSgyKS5jcnQwgaUGCCsGAQUFBzAChoGYbGRhcDovLy9DTj03SXNzdWluZzEsQ049
+QUlBLENOPXB1YmxpYyUyMGtleSUyMHNlcnZpY2VzLENOPXNlcnZpY2VzLENOPUNv
+bmZpZ3VyYXRpb24sREM9Ny0xMSxEQz1jb20/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29i
+amVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkwCwYDVR0PBAQDAgWgMD0G
+CSsGAQQBgjcVBwQwMC4GJisGAQQBgjcVCITAh0aBuppAlZELgbbIQIGi6ViBN4O/
+sFKF0Yw4AgFkAgEcMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAnBgkr
+BgEEAYI3FQoEGjAYMAoGCCsGAQUFBwMBMAoGCCsGAQUFBwMCMB0GA1UdEQQWMBSC
+EjdjYXN0LWRldi43LTExLmNvbTANBgkqhkiG9w0BAQsFAAOCAQEAGqiy8kG9xEhD
+SjtdhzlSbvdmFeUe7iWCnjAyUUastRh/WBCNwLvFJsPH8gR00eUQUGOj8nVwvLOZ
+EmxAeV27UmMR0BsyveNpq6xGmtHrReM2/GGn15BLm3moYN2BPezCQK1XR37kkMY0
+jhqHKGBHZFf1HaIMQA7z4iYRDeLKpLc7K2Qh6d52I9ZXt4yGp35WCQGRw8DhdEO+
+dxE3uyxbwcEaJ6y16Y/AZkwSJchgfT2O2pxOls9ushKq/sPFEOpdHBSTPvSaHb29
+m3oHqQ0VnsY7Jk+WzcTKpGcf2dk/Tz4zXYcs0xN+aSVbzS9k07gI6HlTlsClqhpS
+TYx4wpXY4g==
+-----END CERTIFICATE-----
+
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # vi  7cast-dev.7-11.com.crt
+
+[2]+  Stopped                 vim 7cast-dev.7-11.com.crt
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # az account set --subscription "Enterprise Dev/Test Subscription" && az aks get-credentials --resource-group RG-Dev-APIC --name aksd-apic-002
+The subscription of 'enterprise dev/test subscription' doesn't exist in cloud 'AzureCloud'.
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # az login
+To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code EMSLFYGEG to authenticate.
+The following tenants require Multi-Factor Authentication (MFA). Use 'az login --tenant TENANT_ID' to explicitly login to a tenant.
+94e72c24-487f-4c86-b903-26f3307b5991 '711API'
+[
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "9356ab53-e6a3-4b3e-ae06-a65cdaf3b31e",
+    "id": "ee691273-18af-4600-bc24-eb6768bf9cfa",
+    "isDefault": false,
+    "managedByTenants": [
+      {
+        "tenantId": "2f4a9838-26b7-47ee-be60-ccc1fdec5953"
+      }
+    ],
+    "name": "Enterprise Subscription",
+    "state": "Enabled",
+    "tenantId": "9356ab53-e6a3-4b3e-ae06-a65cdaf3b31e",
+    "user": {
+      "name": "rrai3014@7-11.com",
+      "type": "user"
+    }
+  },
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "9356ab53-e6a3-4b3e-ae06-a65cdaf3b31e",
+    "id": "fc120047-cc25-4115-bb30-830a4945ec06",
+    "isDefault": true,
+    "managedByTenants": [
+      {
+        "tenantId": "2f4a9838-26b7-47ee-be60-ccc1fdec5953"
+      }
+    ],
+    "name": "Enterprise Dev/Test Subscription",
+    "state": "Enabled",
+    "tenantId": "9356ab53-e6a3-4b3e-ae06-a65cdaf3b31e",
+    "user": {
+      "name": "rrai3014@7-11.com",
+      "type": "user"
+    }
+  },
+  {
+    "cloudName": "AzureCloud",
+    "homeTenantId": "9356ab53-e6a3-4b3e-ae06-a65cdaf3b31e",
+    "id": "0c8ee94f-e9a1-4b8a-8bf5-12845b6c165b",
+    "isDefault": false,
+    "managedByTenants": [
+      {
+        "tenantId": "2f4a9838-26b7-47ee-be60-ccc1fdec5953"
+      }
+    ],
+    "name": "Dev/Test Subscription",
+    "state": "Enabled",
+    "tenantId": "9356ab53-e6a3-4b3e-ae06-a65cdaf3b31e",
+    "user": {
+      "name": "rrai3014@7-11.com",
+      "type": "user"
+    }
+  }
+]
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # az account set --subscription "Enterprise Dev/Test Subscription" && az aks get-credentials --resource-group RG-Dev-APIC --name aksd-apic-002
+Merged "aksd-apic-002" as current context in /root/.kube/config
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl config current-context
+aksd-apic-002
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl get secrets
+NAME                                   TYPE                                  DATA   AGE
+7cast-api-dev-ingress-07252023         kubernetes.io/tls                     2      351d
+7cast-api-dev-ingress-07282022         kubernetes.io/tls                     2      358d
+7cast-app-dev-ingress-07252023         kubernetes.io/tls                     2      351d
+7cast-app-dev-ingress-07282022         kubernetes.io/tls                     2      357d
+7dataassure-dev-ingress-tls-11022023   kubernetes.io/tls                     2      252d
+7exp-api-dev-ingress-10212023          kubernetes.io/tls                     2      262d
+7exp-api-dev-ingress-10262022          kubernetes.io/tls                     2      357d
+7exp-app-dev-ingress-10212023          kubernetes.io/tls                     2      262d
+7exp-app-dev-ingress-10262022          kubernetes.io/tls                     2      357d
+7exp-store-api-dev-09302023            kubernetes.io/tls                     2      286d
+blobfusecreds                          azure/blobfuse                        2      237d
+blobfusecreds-audience-builder         Opaque                                2      28d
+blobfusecreds-comparison-utility       Opaque                                2      20d
+blobfusecreds-crm-7cast-api            Opaque                                2      28d
+blobfusecreds-crm-experimentation      Opaque                                2      25d
+blobfusecreds-dpr-dashboard            Opaque                                2      31d
+blobfusecreds-jarvis                   Opaque                                2      20d
+blobfusecreds-mdmdownload              Opaque                                2      16d
+blobfusecreds-mdmupload                Opaque                                2      16d
+blobfusecreds-mvp                      Opaque                                2      46h
+blobfusecreds-mvp-delta-load           Opaque                                2      46h
+blobfusecreds-rgddeblobdev001          azure/blobfuse                        2      343d
+code-validator-api-ingress-04052024    kubernetes.io/tls                     2      97d
+code-validator-api-ingress-10062022    kubernetes.io/tls                     2      279d
+code-validator-dev-ingress-04052024    kubernetes.io/tls                     2      97d
+code-validator-dev-ingress-08252022    kubernetes.io/tls                     2      356d
+dde-optimizer                          kubernetes.io/tls                     2      318d
+default-token-pfjbs                    kubernetes.io/service-account-token   3      358d
+newrelic-token-lrr52                   kubernetes.io/service-account-token   3      259d
+regcred                                kubernetes.io/dockerconfigjson        1      358d
+site-master-dev-ingress-03282024       kubernetes.io/tls                     2      105d
+site-master-dev-ingress-04012023       kubernetes.io/tls                     2      357d
+smbrcnetnificreds-pbi                  microsoft.com/smb                     2      77d
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl create secret tls 7cast-app-dev-ingress-07102024 --key 7cast-dev.7-11.com.p7b --cert
+Error: flag needs an argument: --cert
+
+
+Examples:
+  # Create a new TLS secret named tls-secret with the given key pair:
+  kubectl create secret tls tls-secret --cert=path/to/tls.cert --key=path/to/tls.key
+
+Options:
+      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
+      --append-hash=false: Append a hash of the secret to its name.
+      --cert='': Path to PEM encoded public key certificate.
+      --dry-run=false: If true, only print the object that would be sent, without sending it.
+      --generator='secret-for-tls/v1': The name of the API generator to use.
+      --key='': Path to private key associated with given certificate.
+  -o, --output='': Output format. One of: json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-file.
+      --save-config=false: If true, the configuration of current object will be saved in its annotation. Otherwise, the annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future.
+      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
+      --validate=true: If true, use a schema to validate the input before sending it
+
+Usage:
+  kubectl create secret tls NAME --cert=path/to/cert/file --key=path/to/key/file [--dry-run] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+
+flag needs an argument: --cert
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl create secret tls 7cast-app-dev-ingress-07102024 --key 7cast-dev.7-11.com.p7b --cert
+Error: flag needs an argument: --cert
+
+
+Examples:
+  # Create a new TLS secret named tls-secret with the given key pair:
+  kubectl create secret tls tls-secret --cert=path/to/tls.cert --key=path/to/tls.key
+
+Options:
+      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
+      --append-hash=false: Append a hash of the secret to its name.
+      --cert='': Path to PEM encoded public key certificate.
+      --dry-run=false: If true, only print the object that would be sent, without sending it.
+      --generator='secret-for-tls/v1': The name of the API generator to use.
+      --key='': Path to private key associated with given certificate.
+  -o, --output='': Output format. One of: json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-file.
+      --save-config=false: If true, the configuration of current object will be saved in its annotation. Otherwise, the annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future.
+      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
+      --validate=true: If true, use a schema to validate the input before sending it
+
+Usage:
+  kubectl create secret tls NAME --cert=path/to/cert/file --key=path/to/key/file [--dry-run] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+
+flag needs an argument: --cert
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl create secret tls 7cast-app-dev-ingress-07102024 --key 7cast-dev.7-11.com.p7b --cert
+Error: flag needs an argument: --cert
+
+
+Examples:
+  # Create a new TLS secret named tls-secret with the given key pair:
+  kubectl create secret tls tls-secret --cert=path/to/tls.cert --key=path/to/tls.key
+
+Options:
+      --allow-missing-template-keys=true: If true, ignore any errors in templates when a field or map key is missing in the template. Only applies to golang and jsonpath output formats.
+      --append-hash=false: Append a hash of the secret to its name.
+      --cert='': Path to PEM encoded public key certificate.
+      --dry-run=false: If true, only print the object that would be sent, without sending it.
+      --generator='secret-for-tls/v1': The name of the API generator to use.
+      --key='': Path to private key associated with given certificate.
+  -o, --output='': Output format. One of: json|yaml|name|go-template|go-template-file|template|templatefile|jsonpath|jsonpath-file.
+      --save-config=false: If true, the configuration of current object will be saved in its annotation. Otherwise, the annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future.
+      --template='': Template string or path to template file to use when -o=go-template, -o=go-template-file. The template format is golang templates [http://golang.org/pkg/text/template/#pkg-overview].
+      --validate=true: If true, use a schema to validate the input before sending it
+
+Usage:
+  kubectl create secret tls NAME --cert=path/to/cert/file --key=path/to/key/file [--dry-run] [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+
+flag needs an argument: --cert
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl create secret tls 7cast-app-dev-ingress-07102024  --key 7cast-dev.7-11.com.key --cert 7cast-dev.7-11.com.crt
+
+secret/7cast-app-dev-ingress-07102024 created
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com #
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl get secrets
+NAME                                   TYPE                                  DATA   AGE
+7cast-api-dev-ingress-07252023         kubernetes.io/tls                     2      351d
+7cast-api-dev-ingress-07282022         kubernetes.io/tls                     2      358d
+7cast-app-dev-ingress-07102024         kubernetes.io/tls                     2      42s
+7cast-app-dev-ingress-07252023         kubernetes.io/tls                     2      351d
+7cast-app-dev-ingress-07282022         kubernetes.io/tls                     2      357d
+7dataassure-dev-ingress-tls-11022023   kubernetes.io/tls                     2      252d
+7exp-api-dev-ingress-10212023          kubernetes.io/tls                     2      262d
+7exp-api-dev-ingress-10262022          kubernetes.io/tls                     2      357d
+7exp-app-dev-ingress-10212023          kubernetes.io/tls                     2      262d
+7exp-app-dev-ingress-10262022          kubernetes.io/tls                     2      357d
+7exp-store-api-dev-09302023            kubernetes.io/tls                     2      286d
+blobfusecreds                          azure/blobfuse                        2      237d
+blobfusecreds-audience-builder         Opaque                                2      28d
+blobfusecreds-comparison-utility       Opaque                                2      20d
+blobfusecreds-crm-7cast-api            Opaque                                2      28d
+blobfusecreds-crm-experimentation      Opaque                                2      25d
+blobfusecreds-dpr-dashboard            Opaque                                2      31d
+blobfusecreds-jarvis                   Opaque                                2      20d
+blobfusecreds-mdmdownload              Opaque                                2      16d
+blobfusecreds-mdmupload                Opaque                                2      16d
+blobfusecreds-mvp                      Opaque                                2      46h
+blobfusecreds-mvp-delta-load           Opaque                                2      46h
+blobfusecreds-rgddeblobdev001          azure/blobfuse                        2      343d
+code-validator-api-ingress-04052024    kubernetes.io/tls                     2      97d
+code-validator-api-ingress-10062022    kubernetes.io/tls                     2      279d
+code-validator-dev-ingress-04052024    kubernetes.io/tls                     2      97d
+code-validator-dev-ingress-08252022    kubernetes.io/tls                     2      356d
+dde-optimizer                          kubernetes.io/tls                     2      318d
+default-token-pfjbs                    kubernetes.io/service-account-token   3      358d
+newrelic-token-lrr52                   kubernetes.io/service-account-token   3      259d
+regcred                                kubernetes.io/dockerconfigjson        1      358d
+site-master-dev-ingress-03282024       kubernetes.io/tls                     2      105d
+site-master-dev-ingress-04012023       kubernetes.io/tls                     2      357d
+smbrcnetnificreds-pbi                  microsoft.com/smb                     2      77d
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl get ingress
+NAME                                 CLASS    HOSTS                                 ADDRESS         PORTS     AGE
+comparison-utility-api-ingress-dev   <none>   dde-code-validator-api-dev.7-11.com   172.19.32.209   80, 443   105d
+comparison-utility-app-ingress-dev   <none>   dde-code-validator-dev.7-11.com       172.19.32.225   80, 443   279d
+dpr-dashboard-ingress-dev-v2         <none>   7dataassure-dev.7-11.com              172.19.32.209   80, 443   31d
+mdm-site-master-ingress-dev          <none>   site-master-dev.7-11.com              172.19.32.225   80, 443   357d
+sevencast-api-ingress-dev            <none>   7cast-api-dev.7-11.com                172.19.32.209   80, 443   301d
+sevencast-api-ingress-feat           <none>   7cast-api-dev.7-eleven.com            172.19.32.225   80, 443   15d
+sevencast-app-ingress-dev            <none>   7cast-dev.7-11.com                    172.19.32.209   80, 443   357d
+sevenexp-api-ingress-dev             <none>   7exp-api-dev.7-11.com                 172.19.32.209   80, 443   17d
+sevenexp-app-ingress-dev             <none>   7exp-app-dev.7-11.com                 172.19.32.225   80, 443   20d
+sevenexp-store-api-ingress-dev       <none>   7exp-store-api-dev.7-11.com           172.19.32.225   80, 443   289d
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl get ingress 7cast-dev.7-11.com -o yaml
+Error from server (NotFound): ingresses.networking.k8s.io "7cast-dev.7-11.com" not found
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl describe ingress 7cast-dev.7-11.com -o yaml
+Error: unknown shorthand flag: 'o' in -o
+
+
+Examples:
+  # Describe a node
+  kubectl describe nodes kubernetes-node-emt8.c.myproject.internal
+
+  # Describe a pod
+  kubectl describe pods/nginx
+
+  # Describe a pod identified by type and name in "pod.json"
+  kubectl describe -f pod.json
+
+  # Describe all pods
+  kubectl describe pods
+
+  # Describe pods by label name=myLabel
+  kubectl describe po -l name=myLabel
+
+  # Describe all pods managed by the 'frontend' replication controller (rc-created pods
+  # get the name of the rc as a prefix in the pod the name).
+  kubectl describe pods frontend
+
+Options:
+  -A, --all-namespaces=false: If present, list the requested object(s) across all namespaces. Namespace in current context is ignored even if specified with --namespace.
+  -f, --filename=[]: Filename, directory, or URL to files containing the resource to describe
+  -k, --kustomize='': Process the kustomization directory. This flag can't be used together with -f or -R.
+  -R, --recursive=false: Process the directory used in -f, --filename recursively. Useful when you want to manage related manifests organized within the same directory.
+  -l, --selector='': Selector (label query) to filter on, supports '=', '==', and '!='.(e.g. -l key1=value1,key2=value2)
+      --show-events=true: If true, display events related to the described object.
+
+Usage:
+  kubectl describe (-f FILENAME | TYPE [NAME_PREFIX | -l label] | TYPE/NAME) [options]
+
+Use "kubectl options" for a list of global command-line options (applies to all commands).
+
+unknown shorthand flag: 'o' in -o
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl get ingress
+NAME                                 CLASS    HOSTS                                 ADDRESS         PORTS     AGE
+comparison-utility-api-ingress-dev   <none>   dde-code-validator-api-dev.7-11.com   172.19.32.205   80, 443   105d
+comparison-utility-app-ingress-dev   <none>   dde-code-validator-dev.7-11.com       172.19.32.205   80, 443   279d
+dpr-dashboard-ingress-dev-v2         <none>   7dataassure-dev.7-11.com              172.19.32.205   80, 443   31d
+mdm-site-master-ingress-dev          <none>   site-master-dev.7-11.com              172.19.32.205   80, 443   357d
+sevencast-api-ingress-dev            <none>   7cast-api-dev.7-11.com                172.19.32.205   80, 443   301d
+sevencast-api-ingress-feat           <none>   7cast-api-dev.7-eleven.com            172.19.32.205   80, 443   15d
+sevencast-app-ingress-dev            <none>   7cast-dev.7-11.com                    172.19.32.205   80, 443   357d
+sevenexp-api-ingress-dev             <none>   7exp-api-dev.7-11.com                 172.19.32.205   80, 443   17d
+sevenexp-app-ingress-dev             <none>   7exp-app-dev.7-11.com                 172.19.32.205   80, 443   20d
+sevenexp-store-api-ingress-dev       <none>   7exp-store-api-dev.7-11.com           172.19.32.205   80, 443   289d
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl get ingress sevencast-app-ingress-dev  -o yaml
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # az account set --subscription "Enterprise Dev/Test Subscription" && az aks get-credentials --resource-group RG-Dev-APIC --name aksd-apic-002
+Merged "aksd-apic-002" as current context in /root/.kube/config
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com # kubectl get ingress sevencast-app-ingress-dev  -o yaml                                                                        apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"kubernetes.io/ingress.class":"nginx","nginx.ingress.kubernetes.io/rewrite-target":"/"},"name":"sevencast-app-ingress-dev","namespace":"default"},"spec":{"rules":[{"host":"7cast-dev.7-11.com","http":{"paths":[{"backend":{"service":{"name":"sevencast-app-svc-dev","port":{"number":3000}}},"path":"/","pathType":"Prefix"}]}}],"tls":[{"hosts":["7cast-dev.7-11.com"],"secretName":"7cast-app-dev-ingress-07102024"}]}}
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  creationTimestamp: "2022-07-22T08:01:46Z"
+  generation: 5
+  managedFields:
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:kubernetes.io/ingress.class: {}
+          f:nginx.ingress.kubernetes.io/rewrite-target: {}
+      f:spec:
+        f:rules: {}
+        f:tls: {}
+    manager: kubectl-client-side-apply
+    operation: Update
+    time: "2023-07-14T11:26:39Z"
+  - apiVersion: networking.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:loadBalancer:
+          f:ingress: {}
+    manager: nginx-ingress-controller
+    operation: Update
+    subresource: status
+    time: "2023-07-14T11:37:01Z"
+  name: sevencast-app-ingress-dev
+  namespace: default
+  resourceVersion: "148203400"
+  uid: b473a4de-685c-402b-a090-0d36b8a7634e
+spec:
+  rules:
+  - host: 7cast-dev.7-11.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: sevencast-app-svc-dev
+            port:
+              number: 3000
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - 7cast-dev.7-11.com
+    secretName: 7cast-app-dev-ingress-07102024
+status:
+  loadBalancer:
+    ingress:
+    - ip: 172.19.32.226
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7cast-dev.7-11.com #

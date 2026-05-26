@@ -1,0 +1,425 @@
+
+
+Certificate renewal :-
+
+IP- 172.22.143.100
+Use PutTy notebook to login to remote ip
+
+Steps 1:
+
+First login as root
+
+Step2:
+
+Go to the cert location
+
+Step3:
+
+Take backup of current file using _bkp_date
+
+Step4:
+
+Create director with the same name as prior
+
+Step5:
+Generate Key :-
+
+openssl genrsa -out dde-optimizer.7-Eleven.com.key 2048
+
+Generate CSR  :-
+mail refrence :-New Certificate Request - dde-7eye-api-dev.7-11.com , dde-7eye-delta-dev.7-11.com
+
+openssl req -new -key dde-optimizer.7-Eleven.com.key -out dde-optimizer.7-Eleven.com.csr
+openssl req -new -key 7trends-dev.7-11.com.key -out 7trends-dev.7-11.com.csr
+
+
+Country Name (2 letter code) [XX]:US
+State or Province Name (full name) []:Texas
+Locality Name (eg, city) [Default City]:Dallas
+Organization Name (eg, company) [Default Company Ltd]:7-Eleven, Inc.
+Organizational Unit Name (eg, section) []:Dist-DDE-DevOps
+Common Name (eg, your name or your server's hostname) []:dde-dremio.7-eleven.com
+Email Address []:rrai3014@7-11.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+
+
+
+Use below link to fill CSR form :- csr cheker
+
+https://digital-711.atlassian.net/wiki/spaces/DDE/pages/731220242/SSL+TLS+certificate+procurement
+
+cert cheker:------     https://www.sslshopper.com/certificate-decoder.html
+
+Step6:
+
+Download csr.
+
+Step7:
+
+Raise request, 7help, Non store catalog, requests, Security Certificate request
+
+Drop an email for confirmation(Check rohan mail to jay shaw, new certificate request)
+
+Log in with Atlassian account
+
+Log in to Jira, Confluence, and all other Atlassian Cloud products here. Not an Atlassian user? Sign up for free.
+
+
+
+
+
+cert creation:=
+
+1.    cd /
+2.     ls
+3.     cd /data
+4.     cd /cert
+5.     ls
+6.     cd dde-dremio.7-eleven.com
+7.    ls
+8.    cd ..
+9.    broot  -i
+10.   cd /
+11.    ls
+12 .   cd data/certs
+13.   ls
+14.    cd dde-dremio.7-eleven.com
+15 .  ls
+16.   cd ..
+17.   mv  dde-optimizer.7-Eleven.com  dde-optimizer.7-Eleven.com_bkp_07082023
+
+18.    mkdir 7dataassure-forms-dev.7-Eleven.com
+19.     cd  mkdir 7cast-dev.7-11.com
+20.   openssl genrsa -out 7dataassure-forms-dev.7-Eleven.com7dataassure-forms.7-Eleven.com.key 2048
+21.  openssl req -new -key 7dataassure-forms.7-Eleven.com.key -out 7dataassure-forms.7-Eleven.com.csr
+22.   Warning Production!
+         root@MSPL-DDEFTP-A01 certs # openssl req -new -key dde-dremio.7-eleven.com.key -out dde-dremio.7-eleven.com.csr
+         You are about to be asked to enter information that will be incorporated
+         into your certificate request.
+         What you are about to enter is what is called a Distinguished Name or a DN.
+         There are quite a few fields but you can leave some blank
+         For some fields there will be a default value,
+        If you enter '.', the field will be left blank.
+          -----
+        Country Name (2 letter code) [XX]:US
+        State or Province Name (full name) []:Texas
+         Locality Name (eg, city) [Default City]:Irving
+       Organization Name (eg, company) [Default Company Ltd]:7-Eleven, Inc.
+        Organizational Unit Name (eg, section) []:IT
+         Common Name (eg, your name or your server's hostname) []:dde-dremio.7-eleven.com
+      Email Address []:rrai3014@7-11.com
+
+      Please enter the following 'extra' attributes
+     to be sent with your certificate request
+     A challenge password []:
+      An optional company name []:
+23 .  cp 7dataassure-forms.7-Eleven.com.csr /home/rrai3014@7-11.com
+
+
+
+
+RESULT
+==========
+
+login as: rrai3014@7-11.com
+rrai3014@7-11.com@172.22.143.100's password:
+login as: rrai3014@7-11.com
+rrai3014@7-11.com@172.22.143.100's password:
+Last login: Tue Jul  4 09:05:07 2023 from 172.16.56.62
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [84] :
+ ~$ ls
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [85] :
+ ~$ cd  ..
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [86] :
+ /home$ ls
+admin711           braj3001@7-11.com  ikan3001@7-11.com  nxautomation       rsin3165@7-11.com  s2094198@7-11.com         sdjea001@7-11.com
+agir3001@7-11.com  caavu001@7-11.com  jthom137@7-11.com  pgup3003@7-11.com  s1866102@7-11.com  s2138643@7-11.com         sgara004@7-11.com
+aravi002@7-11.com  cssansible         jthom139@7-11.com  rg0001@7-11.com    s1881582@7-11.com  sa-dde-admin@7-11.com     udac3001@7-11.com
+asin3294@7-11.com  ddeadmin           moldh001@7-11.com  rmad3001@7-11.com  s1970593@7-11.com  sa-sn-disco-wmi@7-11.com  vgort0001@7-11.com
+asin3301@7-11.com  elasticsearch      npat3053@7-11.com  rrai3014@7-11.com  s2090318@7-11.com  sa-vascan@7-11.com
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [87] :
+ /home$ cd /
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [88] :
+ /$ ls
+1                                   7gov-dev.7-11.com  boot                     data-audit.7-11.com.p7b  etc   lib64  mount  root  srv   test2   usr
+7dataassure-forms.7-Eleven.com      backup             data                     dev                      home  media  opt    run   sys   tmp     var
+7dataassure-forms.7-eleven.com.p7b  bin                data-audit.7-11.com.crt  enterprise_data          lib   mnt    proc   sbin  test  upload
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [89] :
+ /$ cd data
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [90] :
+ /data$ ls
+7-Eleven  confluent_latest_linux_amd64.tar.gz  fadl_sox_related         jmeter  nifi-registry-0.3.0             pgpkeys                  scripts  ssh
+certs     dde-sftp                             jdk-8u231-linux-x64.rpm  logs    nifi-registry-0.3.0-bin.tar.gz  s-17caaf9574464fbfa_ssh  sftp
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [91] :
+ /data$ cd cert
+-bash: cd: cert: No such file or directory
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [92] :
+ /data$ ls
+7-Eleven  confluent_latest_linux_amd64.tar.gz  fadl_sox_related         jmeter  nifi-registry-0.3.0             pgpkeys                  scripts  ssh
+certs     dde-sftp                             jdk-8u231-linux-x64.rpm  logs    nifi-registry-0.3.0-bin.tar.gz  s-17caaf9574464fbfa_ssh  sftp
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [93] :
+ /data$ cd certs
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [94] :
+ /data/certs$ ls
+7cast.7-11.com                                   7exp-store-api-dev.7-11.com                       dde-dremio-dev.7-eleven.com-bkp1
+7cast.7-11.com_bkp_09232022                      7exp-store-api-dev.7-eleven.com                   dde-jupyter-dev.7-eleven.com
+7cast-api.7-11.com                               7gov-dev.7-11.com                                 dde-optimizer.7-Eleven.com
+7cast-api.7-11.com_bkp_09232022                  7gov-dev.7-11.com.bkp                             dde-optimizer.7-Eleven.com_bkp_08292022
+7cast-api.7-Eleven.com                           7gov-dev.7-11.com_bkp_07072021                    dde-rasa-ai-dev.7-eleven.com
+7cast-api-dev.7-11.com                           7gov-dev.7-11.com_bkp_07272020                    dde-sonarqube.7-Eleven.com
+7cast-api-dev.7-11.com_bkp_07252022              7gov-dev.7-11.com_bkp_28062023                    dde-sonarqube.7-Eleven.com_bkp_27052020
+7cast-api-dev.7-eleven.com                       7thsense.7-11.com                                 forecastaiapi-prod.7-Eleven_bkp_22102019.com
+7cast-dev.7-11.com                               backup                                            forecastaiapi-prod.7-Eleven.com
+7cast-dev.7-11.com_bkp_07252022                  data-audit.7-11_bkp_2012020.com                   forecastaiapi-prod.7-Eleven.com_bkp_10082020
+7cast-dev.7-eleven.com                           data-audit.7-11.com                               forecastaiapi-test.7-Eleven.com
+7dataassure.7-11.com                             data-audit.7-11.com_bkp_12142022                  forecastaiapi-test.7-Eleven.com_bkp_10082020
+7dataassure.7-11.com_bkp_05092023                data-audit.7-11.com_bkp_12212020                  forecastaiapi-test.7-Eleven.com.bkp.10182019
+7dataassure.7-11.com_bkp_05162022                data-audit.7-11.com_bkp_12222021                  landingportal-dev.7-11.com
+7dataassure-dev.7-11.com                         data-audit-dev.7-11_bkp_05122019.com              loyaltyaiapi-prod.7-Eleven_bkp_06012020.com
+7dataassure-dev.7-11.com_bkp_11022022            data-audit-dev.7-11.com                           loyaltyaiapi-prod.7-Eleven.com
+7dataassure-dev.7-11.com_bkp_11092021            data-audit-dev.7-11.com_bkp_12212020              loyaltyaiapi-prod.7-Eleven.com_bkp_12102020
+7dataassure-dev.7-eleven.com                     dde-7eye-dev.7-11.com                             loyaltyaiapi-test.7-Eleven.com
+7dataassure-forms.7-Eleven.com                   dde-7eye-dev.7-eleven.com                         loyaltyaiapi-test.7-Eleven.com_bkp_12102020
+7dataassure-forms.7-Eleven.com.bkp               dde-astro-af.7-eleven.com                         loyaltyaiapi-test.7-Eleven.com_bkp_9Jan2020
+7dataassure-forms.7-Eleven.com_bkp_07252022      dde-astro-af.7-eleven.com_backup091022            nudge360-predev.7-11.com
+7dataassure-forms.7-Eleven.com_bkp_10292021      dde-astro-af-dev.7-eleven.com                     personalizationapi-prod.7-Eleven_bkp_22102019.com
+7dataassure-forms.7-Eleven.com_bkp_11102020      dde-astro-af-dev.7-eleven.com_bkp_06132023        personalizationapi-prod.7-Eleven.com
+7dataassure-forms-dev.7-Eleven.com               dde-astro-af-dev.7-eleven.com.bkp20220628         personalizationapi-prod.7-Eleven.com_bkp_10222020
+7dataassure-forms-dev.7-Eleven.com_bkp_07252022  dde-astro-af-dev.7-eleven-revokelater.com         personalizationapi-test.7-Eleven_bkp_22102019.com
+7dataassure-forms-dev.7-Eleven.com_bkp_10292021  dde-code-validator-api-dev.7-11.com               personalizationapi-test.7-Eleven.com
+7dataassure-forms-dev.7-Eleven.com_bkp_11102020  dde-code-validator-api-dev.7-11.com_bkp_04042023  personalizationapi-test.7-Eleven.com_bkup_10152020
+7dataassure-forms-predev.7-eleven.com            dde-code-validator-api-dev.7-eleven.com           product-master.7-11.com
+7dataassure-predev.7-11.com                      dde-code-validator-dev.7-11.com                   product-master-dev.7-11.com
+7exp.7-11.com                                    dde-code-validator-dev.7-11.com_bkp_04042023      site-master.7-11.com
+7exp.7-11.com_bkp_03072023                       dde-code-validator-dev.7-eleven.com               site-master.7-11.com_bkp_03242023
+7exp-api.7-11.com                                dde-dremio.7-eleven.com                           site-master.7-11.com_bkp03312022
+7exp-api.7-11.com_bkp_03072023                   dde-dremio.7-eleven.com-08022022                  site-master-dev.7-11.com
+7exp-api-dev.7-11.com                            dde-dremio.7-eleven.com-08162022                  site-master-dev.7-11.com_bkp_03242023
+7exp-api-dev.7-11.com_bkp_10142022               dde-dremio.7-eleven.com_bkp_07252022              site-master-dev.7-11.com_bkp_03312022
+7exp-api-dev.7-eleven.com                        dde-dremio-dev.7-eleven.com                       site-master-dev.7-eleven.com
+7exp-app-dev.7-11.com                            dde-dremio-dev.7-eleven.com-080122                test
+7exp-app-dev.7-11.com_bkp_10182022               dde-dremio-dev.7-eleven.com-08162022              test-7-11.com
+7exp-app-dev.7-eleven.com                        dde-dremio-dev.7-eleven.com_bkp                   thoughtspot-dev.7-11_bkp_28102019.com
+7exp-store-api.7-11.com                          dde-dremio-dev.7-eleven.com_bkp_04072023
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [95] :
+ /data/certs$ cd dde-dremio.7-eleven.com
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [96] :
+ /data/certs/dde-dremio.7-eleven.com$ ls
+dde-dremio.7-eleven.com.crt         dde-dremio.7-eleven.com.crt-bkp  dde-dremio.7-eleven.com.key  dde-dremio.7-eleven.com.p7b-bkp
+dde-dremio.7-eleven.com.crt_081922  dde-dremio.7-eleven.com.csr      dde-dremio.7-eleven.com.p7b  dde-dremio.7-eleven.com.sectigo
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [97] :
+ /data/certs/dde-dremio.7-eleven.com$ cd ..
+rrai3014@7-11.com@MSPL-DDEFTP-A01  [98] :
+ /data/certs$ broot -i
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+[sudo] password for rrai3014@7-11.com:
+Script started, file is /var/brootlogs/rrai3014@7-11.com.230705
+
+Warning Production!
+root@MSPL-DDEFTP-A01 ~ # cd /
+
+Warning Production!
+root@MSPL-DDEFTP-A01 / # ls
+1                                   7gov-dev.7-11.com  boot                     data-audit.7-11.com.p7b  etc   lib64  mount  root  srv   test2   usr
+7dataassure-forms.7-Eleven.com      backup             data                     dev                      home  media  opt    run   sys   tmp     var
+7dataassure-forms.7-eleven.com.p7b  bin                data-audit.7-11.com.crt  enterprise_data          lib   mnt    proc   sbin  test  upload
+
+Warning Production!
+root@MSPL-DDEFTP-A01 / # cd /data
+
+Warning Production!
+root@MSPL-DDEFTP-A01 data # ls
+7-Eleven  confluent_latest_linux_amd64.tar.gz  fadl_sox_related         jmeter  nifi-registry-0.3.0             pgpkeys                  scripts  ssh
+certs     dde-sftp                             jdk-8u231-linux-x64.rpm  logs    nifi-registry-0.3.0-bin.tar.gz  s-17caaf9574464fbfa_ssh  sftp
+
+Warning Production!
+root@MSPL-DDEFTP-A01 data # cd /certs
+bash: cd: /certs: No such file or directory
+
+Warning Production!
+root@MSPL-DDEFTP-A01 data # ls
+7-Eleven  confluent_latest_linux_amd64.tar.gz  fadl_sox_related         jmeter  nifi-registry-0.3.0             pgpkeys                  scripts  ssh
+certs     dde-sftp                             jdk-8u231-linux-x64.rpm  logs    nifi-registry-0.3.0-bin.tar.gz  s-17caaf9574464fbfa_ssh  sftp
+
+Warning Production!
+root@MSPL-DDEFTP-A01 data # cd /certs
+bash: cd: /certs: No such file or directory
+
+Warning Production!
+root@MSPL-DDEFTP-A01 data # cd ..
+
+Warning Production!
+root@MSPL-DDEFTP-A01 / #  cd data/certs
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # ls
+7cast.7-11.com                                   7exp-store-api-dev.7-11.com                       dde-dremio-dev.7-eleven.com-bkp1
+7cast.7-11.com_bkp_09232022                      7exp-store-api-dev.7-eleven.com                   dde-jupyter-dev.7-eleven.com
+7cast-api.7-11.com                               7gov-dev.7-11.com                                 dde-optimizer.7-Eleven.com
+7cast-api.7-11.com_bkp_09232022                  7gov-dev.7-11.com.bkp                             dde-optimizer.7-Eleven.com_bkp_08292022
+7cast-api.7-Eleven.com                           7gov-dev.7-11.com_bkp_07072021                    dde-rasa-ai-dev.7-eleven.com
+7cast-api-dev.7-11.com                           7gov-dev.7-11.com_bkp_07272020                    dde-sonarqube.7-Eleven.com
+7cast-api-dev.7-11.com_bkp_07252022              7gov-dev.7-11.com_bkp_28062023                    dde-sonarqube.7-Eleven.com_bkp_27052020
+7cast-api-dev.7-eleven.com                       7thsense.7-11.com                                 forecastaiapi-prod.7-Eleven_bkp_22102019.com
+7cast-dev.7-11.com                               backup                                            forecastaiapi-prod.7-Eleven.com
+7cast-dev.7-11.com_bkp_07252022                  data-audit.7-11_bkp_2012020.com                   forecastaiapi-prod.7-Eleven.com_bkp_10082020
+7cast-dev.7-eleven.com                           data-audit.7-11.com                               forecastaiapi-test.7-Eleven.com
+7dataassure.7-11.com                             data-audit.7-11.com_bkp_12142022                  forecastaiapi-test.7-Eleven.com_bkp_10082020
+7dataassure.7-11.com_bkp_05092023                data-audit.7-11.com_bkp_12212020                  forecastaiapi-test.7-Eleven.com.bkp.10182019
+7dataassure.7-11.com_bkp_05162022                data-audit.7-11.com_bkp_12222021                  landingportal-dev.7-11.com
+7dataassure-dev.7-11.com                         data-audit-dev.7-11_bkp_05122019.com              loyaltyaiapi-prod.7-Eleven_bkp_06012020.com
+7dataassure-dev.7-11.com_bkp_11022022            data-audit-dev.7-11.com                           loyaltyaiapi-prod.7-Eleven.com
+7dataassure-dev.7-11.com_bkp_11092021            data-audit-dev.7-11.com_bkp_12212020              loyaltyaiapi-prod.7-Eleven.com_bkp_12102020
+7dataassure-dev.7-eleven.com                     dde-7eye-dev.7-11.com                             loyaltyaiapi-test.7-Eleven.com
+7dataassure-forms.7-Eleven.com                   dde-7eye-dev.7-eleven.com                         loyaltyaiapi-test.7-Eleven.com_bkp_12102020
+7dataassure-forms.7-Eleven.com.bkp               dde-astro-af.7-eleven.com                         loyaltyaiapi-test.7-Eleven.com_bkp_9Jan2020
+7dataassure-forms.7-Eleven.com_bkp_07252022      dde-astro-af.7-eleven.com_backup091022            nudge360-predev.7-11.com
+7dataassure-forms.7-Eleven.com_bkp_10292021      dde-astro-af-dev.7-eleven.com                     personalizationapi-prod.7-Eleven_bkp_22102019.com
+7dataassure-forms.7-Eleven.com_bkp_11102020      dde-astro-af-dev.7-eleven.com_bkp_06132023        personalizationapi-prod.7-Eleven.com
+7dataassure-forms-dev.7-Eleven.com               dde-astro-af-dev.7-eleven.com.bkp20220628         personalizationapi-prod.7-Eleven.com_bkp_10222020
+7dataassure-forms-dev.7-Eleven.com_bkp_07252022  dde-astro-af-dev.7-eleven-revokelater.com         personalizationapi-test.7-Eleven_bkp_22102019.com
+7dataassure-forms-dev.7-Eleven.com_bkp_10292021  dde-code-validator-api-dev.7-11.com               personalizationapi-test.7-Eleven.com
+7dataassure-forms-dev.7-Eleven.com_bkp_11102020  dde-code-validator-api-dev.7-11.com_bkp_04042023  personalizationapi-test.7-Eleven.com_bkup_10152020
+7dataassure-forms-predev.7-eleven.com            dde-code-validator-api-dev.7-eleven.com           product-master.7-11.com
+7dataassure-predev.7-11.com                      dde-code-validator-dev.7-11.com                   product-master-dev.7-11.com
+7exp.7-11.com                                    dde-code-validator-dev.7-11.com_bkp_04042023      site-master.7-11.com
+7exp.7-11.com_bkp_03072023                       dde-code-validator-dev.7-eleven.com               site-master.7-11.com_bkp_03242023
+7exp-api.7-11.com                                dde-dremio.7-eleven.com                           site-master.7-11.com_bkp03312022
+7exp-api.7-11.com_bkp_03072023                   dde-dremio.7-eleven.com-08022022                  site-master-dev.7-11.com
+7exp-api-dev.7-11.com                            dde-dremio.7-eleven.com-08162022                  site-master-dev.7-11.com_bkp_03242023
+7exp-api-dev.7-11.com_bkp_10142022               dde-dremio.7-eleven.com_bkp_07252022              site-master-dev.7-11.com_bkp_03312022
+7exp-api-dev.7-eleven.com                        dde-dremio-dev.7-eleven.com                       site-master-dev.7-eleven.com
+7exp-app-dev.7-11.com                            dde-dremio-dev.7-eleven.com-080122                test
+7exp-app-dev.7-11.com_bkp_10182022               dde-dremio-dev.7-eleven.com-08162022              test-7-11.com
+7exp-app-dev.7-eleven.com                        dde-dremio-dev.7-eleven.com_bkp                   thoughtspot-dev.7-11_bkp_28102019.com
+7exp-store-api.7-11.com                          dde-dremio-dev.7-eleven.com_bkp_04072023
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # cd dde-dremio.7-eleven.com
+
+Warning Production!
+root@MSPL-DDEFTP-A01 dde-dremio.7-eleven.com # ls
+dde-dremio.7-eleven.com.crt         dde-dremio.7-eleven.com.crt-bkp  dde-dremio.7-eleven.com.key  dde-dremio.7-eleven.com.p7b-bkp
+dde-dremio.7-eleven.com.crt_081922  dde-dremio.7-eleven.com.csr      dde-dremio.7-eleven.com.p7b  dde-dremio.7-eleven.com.sectigo
+
+Warning Production!
+root@MSPL-DDEFTP-A01 dde-dremio.7-eleven.com # cd ..
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # mv  dde-dremio.7-eleven.com  dde-dremio.7-eleven.com_bkp_05072023
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # openssl genrsa -out dde-dremio.7-eleven.com.key 2048
+Generating RSA private key, 2048 bit long modulus
+.................+++
+....................+++
+e is 65537 (0x10001)
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # openssl req -new -key openssl genrsa -out dde-dremio.7-eleven.com.key 2048
+unknown option genrsa
+req [options] <infile >outfile
+where options  are
+ -inform arg    input format - DER or PEM
+ -outform arg   output format - DER or PEM
+ -in arg        input file
+ -out arg       output file
+ -text          text form of request
+ -pubkey        output public key
+ -noout         do not output REQ
+ -verify        verify signature on REQ
+ -modulus       RSA modulus
+ -nodes         don't encrypt the output key
+ -engine e      use engine e, possibly a hardware device
+ -subject       output the request's subject
+ -passin        private key password source
+ -key file      use the private key contained in file
+ -keyform arg   key file format
+ -keyout arg    file to send the key to
+ -rand file:file:...
+                load the file (or the files in the directory) into
+                the random number generator
+ -newkey rsa:bits generate a new RSA key of 'bits' in size
+ -newkey dsa:file generate a new DSA key, parameters taken from CA in 'file'
+ -newkey ec:file generate a new EC key, parameters taken from CA in 'file'
+ -[digest]      Digest to sign with (see openssl dgst -h for list)
+ -config file   request template file.
+ -subj arg      set or modify request subject
+ -multivalue-rdn enable support for multivalued RDNs
+ -new           new request.
+ -batch         do not ask anything during request generation
+ -x509          output a x509 structure instead of a cert. req.
+ -days          number of days a certificate generated by -x509 is valid for.
+ -set_serial    serial number to use for a certificate generated by -x509.
+ -newhdr        output "NEW" in the header lines
+ -asn1-kludge   Output the 'request' in a format that is wrong but some CA's
+                have been reported as requiring
+ -extensions .. specify certificate extension section (override value in config file)
+ -reqexts ..    specify request extension section (override value in config file)
+ -utf8          input characters are UTF8 (default ASCII)
+ -nameopt arg    - various certificate name options
+ -reqopt arg    - various request text options
+
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # .key -out openssl genrsa -out dde-dremio.7-eleven.com.key 2048
+bash: .key: command not found
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs # openssl req -new -key dde-dremio.7-eleven.com.key -out dde-dremio.7-eleven.com.csr
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [XX]:US
+State or Province Name (full name) []:Texas
+Locality Name (eg, city) [Default City]:Dallas
+Organization Name (eg, company) [Default Company Ltd]:7-Eleven, Inc.
+Organizational Unit Name (eg, section) []:Dist-DDE-DevOps
+Common Name (eg, your name or your server's hostname) []:dde-dremio.7-eleven.com
+Email Address []:rrai3014@7-11.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+
+Warning Production!
+root@MSPL-DDEFTP-A01 certs #
+
+============================================================
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7dataassure-forms.7-Eleven.com # ls
+7dataassure-forms.7-Eleven.com.csr
+7dataassure-forms.7-Eleven.com.csr_bkp_11072023
+7dataassure-forms.7-Eleven.com.key
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7dataassure-forms.7-Eleven.com # cp 7dataassure-forms.7-Eleven.com /home/rrai3014@7-11.com
+cp: cannot stat ‘7dataassure-forms.7-Eleven.com’: No such file or directory
+
+Warning Production!
+root@MSPL-DDEFTP-A01 7dataassure-forms.7-Eleven.com # cp 7dataassure-forms.7-Eleven.com.csr /home/rrai3014@7-11.com
+cp: overwrite ‘/home/rrai3014@7-11.com/7dataassure-forms.7-Eleven.com.csr’? yes
+
+Warning Production!
+
+
+
+
+

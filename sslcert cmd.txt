@@ -1,0 +1,61 @@
+openssl pkcs7 -print_certs -inform der -in 7dataassure-forms.7-eleven.com.p7b -out 7dataassure-forms.7-eleven.com.crt
+
+
+7dataassure-forms.7-Eleven.com
+1- openssl genrsa -out 7dataassure-forms.7-Eleven.com.key 2048
+2- openssl req -new -key 7dataassure-forms.7-Eleven.com.key -out 7dataassure-forms.7-Eleven.com.csr
+3- openssl pkcs7 -print_certs -inform der -in 7dataassure-forms.7-eleven.com.p7b -out 7dataassure-forms.7-eleven.com.crt
+4-kubectl create secret tls 7exp-app-dev-ingress-10262024  --key  7exp-app-dev.7-11.com.key --cert  7exp-app-dev.7-11.com.crt 
+
+openssl pkcs7 -print_certs -inform der -in  7exp-store-api-dev.7-11.com.p7b -out  7exp-store-api-dev.7-11.com.crt
+
+Valid To: July 10, 2024
+7cast-app-dev-ingress-07102024
+7exp-app-dev-ingress-10262024
+ssh rrai3014@172.22.14
+dde-mlflow-dev.7-11.com
+valid t0 :  July 10, 2024
+mlflow-dev-ingress-10042024
+7dataassure-forms-dev-ingress-07102024
+
+
+
+subject=/C=US/ST=Texas/L=Irving/O=7-Eleven,Inc./OU=IT/CN=7cast-dev.7-11.com/emailAddress=rrai3014@7-11.com
+issuer=/DC=com/DC=7-11/CN=7Issuing1
+-----BEGIN CERTIFICATE-----
+MIIGYzCCBUugAwIBAgITSQAAQDYqKBFR9Q7/2QACAABANjANBgkqhkiG9w0BAQsF
+ADA/MRMwEQYKCZImiZPyLGQBGRYDY29tMRQwEgYKCZImiZPyLGQBGRYENy0xMTES
+MBAGA1UEAxMJN0lzc3VpbmcxMB4XDTIzMDcxMTEzNTExOVoXDTI0MDcxMDEzNTEx
+OVowgZIxCzAJBgNVBAYTAlVTMQ4wDAYDVQQIEwVUZXhhczEPMA0GA1UEBxMGSXJ2
+aW5nMRYwFAYDVQQKEw03LUVsZXZlbixJbmMuMQswCQYDVQQLEwJJVDEbMBkGA1UE
+AxMSN2Nhc3QtZGV2LjctMTEuY29tMSAwHgYJKoZIhvcNAQkBFhFycmFpMzAxNEA3
+LTExLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM4mZvt/8Eej
+qJxMQlDOr3vtyiWKjlC7h++KI4YDgCBQL6QATrgmf5KAT+sYJlkdh2XalN0w9W/P
+bvlCSixLnsDCVn/MsmrLfJK8hZdaiBrut3SAv5mKvX5MSLvh3N9LrpNjN2R9JtwS
+qmx+TZ6CbCa41QG2zrhblN+6FZVrIHLISSWGpgotMoq3m7GzCFQd+OxbVdPzRa0M
+qkVLLAzfRXsjcmxIsZXEZFSP29eOi9O4JEu5K4Jv4DZI0YzxeUpmhilNiMp0nNK/
+R9BBUc6WGyzSGx2wj0dhUPsAtSZFqNwH+W+2FUVX4j0tHSSHbL7PW9mKkupC2rAU
+5jrQ66i8v0kCAwEAAaOCAwIwggL+MB0GA1UdDgQWBBTCWWC7tA7CBO1PuSMUA5y9
+mDXWajAfBgNVHSMEGDAWgBR692yb3xPNVOP7dCoz3HsTeyJvEDCB+AYDVR0fBIHw
+MIHtMIHqoIHnoIHkhixodHRwOi8vN2VsZXZlbnBraS43LTExLmNvbS9DUkwvN0lz
+c3VpbmcxLmNybIaBs2xkYXA6Ly8vQ049N0lzc3VpbmcxLENOPXVzdHhhbGFpc2Nh
+MDEsQ049Q0RQLENOPXB1YmxpYyUyMGtleSUyMHNlcnZpY2VzLENOPXNlcnZpY2Vz
+LENOPUNvbmZpZ3VyYXRpb24sREM9Ny0xMSxEQz1jb20/Y2VydGlmaWNhdGVSZXZv
+Y2F0aW9uTGlzdD9iYXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50
+MIIBDAYIKwYBBQUHAQEEgf8wgfwwUgYIKwYBBQUHMAKGRmh0dHA6Ly83ZWxldmVu
+cGtpLjctMTEuY29tL0FJQS91c3R4YWxhaXNjYTAxLjctMTEuY29tXzdJc3N1aW5n
+MSgyKS5jcnQwgaUGCCsGAQUFBzAChoGYbGRhcDovLy9DTj03SXNzdWluZzEsQ049
+QUlBLENOPXB1YmxpYyUyMGtleSUyMHNlcnZpY2VzLENOPXNlcnZpY2VzLENOPUNv
+bmZpZ3VyYXRpb24sREM9Ny0xMSxEQz1jb20/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29i
+amVjdENsYXNzPWNlcnRpZmljYXRpb25BdXRob3JpdHkwCwYDVR0PBAQDAgWgMD0G
+CSsGAQQBgjcVBwQwMC4GJisGAQQBgjcVCITAh0aBuppAlZELgbbIQIGi6ViBN4O/
+sFKF0Yw4AgFkAgEcMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAnBgkr
+BgEEAYI3FQoEGjAYMAoGCCsGAQUFBwMBMAoGCCsGAQUFBwMCMB0GA1UdEQQWMBSC
+EjdjYXN0LWRldi43LTExLmNvbTANBgkqhkiG9w0BAQsFAAOCAQEAGqiy8kG9xEhD
+SjtdhzlSbvdmFeUe7iWCnjAyUUastRh/WBCNwLvFJsPH8gR00eUQUGOj8nVwvLOZ
+EmxAeV27UmMR0BsyveNpq6xGmtHrReM2/GGn15BLm3moYN2BPezCQK1XR37kkMY0
+jhqHKGBHZFf1HaIMQA7z4iYRDeLKpLc7K2Qh6d52I9ZXt4yGp35WCQGRw8DhdEO+
+dxE3uyxbwcEaJ6y16Y/AZkwSJchgfT2O2pxOls9ushKq/sPFEOpdHBSTPvSaHb29
+m3oHqQ0VnsY7Jk+WzcTKpGcf2dk/Tz4zXYcs0xN+aSVbzS9k07gI6HlTlsClqhpS
+TYx4wpXY4g==
+-----END CERTIFICATE-----
