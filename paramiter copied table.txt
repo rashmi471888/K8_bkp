@@ -1,0 +1,28 @@
+pipeline- COPY_DEV_ADLS_TO_PROD_ADLS_BR
+
+
+
+
+Source File Folder : 
+data-warehouse
+
+ 
+
+Source File Directory :
+SPARK_TABLES/DIGITAL/SPEEDWAY/spwy_lmdf_t_accrual_account
+
+ 
+
+
+Destination-File-Folder:
+data-warehouse
+
+ 
+
+Destination-File-Directory:
+SPARK_TABLES/DIGITAL/SPEEDWAY/spwy_lmdf_t_accrual_account
+
+
+command- %sql
+
+select count(*) from digital.spwy_lmdf_emp_weekly_hours

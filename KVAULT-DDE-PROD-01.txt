@@ -1,0 +1,13 @@
+kvault command
+
+az account set --subscription "Dev/Test Subscription"
+az keyvault secret show --subscription  0c8ee94f-e9a1-4b8a-8bf5-12845b6c165b --vault-name KeyVault-DDE-DEV-01 --name ED-SPDWY-SFTP-TEST-HOST --query value
+az keyvault secret set --name DDE-SP-AA-DDE-DEV-01-CLIENT-SECRET  --vault-name KeyVault-DDE-DEV-01 --value aaaaaaa
+
+ 
+
+ 
+
+az account set --subscription "Enterprise Subscription"
+az keyvault secret show --subscription ee691273-18af-4600-bc24-eb6768bf9cfa --vault-name KVAULT-DDE-PROD-01 --name DDE-PROD-DLVRY-MONGODB-ANALYTICS --query value
+az keyvault secret set --name DDE-SP-AA-DDE-PROD-01-CLIENT-SECRET  --vault-name KVAULT-DDE-PROD-01 --value aaaa

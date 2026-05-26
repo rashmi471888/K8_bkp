@@ -1,0 +1,19 @@
+Everyone For Repository Creation follow the below Steps :
+
+ 
+
+ 
+
+1) Have a Proper Naming Standard - go with all caps. eg: CRM, 7INTEL, 7NOW
+
+2) Create two branches dev with readmefile & Create master based on dev  - give a commit message as "Intial Commit" 
+
+3) Make dev a default branch.
+
+4) Project Settings -> Repositories -> Repo -> Settings add dev & master as Searchable branches list.
+
+5 ) Project Settings -> Repositories -> Repo -> Policies -> Branch Policies -> dev -> Automatically included reviewers ->  check with SME & add 2 members from the project as Required Reviewer.
+
+6) Project Settings -> Repositories -> Repo -> Policies -> Branch Policies -> master -> Require a minimum number of reviewers -> Minimum number of reviewers > 1
+
+7) Project Settings -> Repositories -> Repo -> Policies -> Branch Policies -> master -> Automatically included reviewers -> make devops team as required approver.

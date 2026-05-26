@@ -1,0 +1,11 @@
+Rajendran, Bharath - Mindtree / offshore team, OPSWB issue got escalated yesterday. We need to enhance our monitoring and alerts to capture all errors. This is a critical application and we cannot afford downtime. Until we have proper monitoring in place, can we monitor the opswb dashboard manually at 5.45 AM CST.
+
+Please check the health of Pinot and presto pods in prod AKS cluster aksp-api-aisa-002 (az account set -s "Enterprise API Subscription";az aks get-credentials --resource-group RG-Prod-AISA --name aksp-api-aisa-002)
+
+Login to OPSWB dashboard and make sure the cards are loading (https://myopswb.7-eleven.com/operations/workbench/dashboard) . Please raise AD group access to APP-OpsWorkbench-Users if you dont have access to dashboard.
+
+Login to PrestoUI and make sure the queries are getting completed while accessing the dashboard. (https://myopswb.7-eleven.com/operations/workbench/dashboard)
+ 
+i have created a tracker. Please update the status here (OPSWB_Prod_Dashoard_Status_Check.xlsx). Please let me know if you have any questions.
+
+execle sheet   :   https://teams.microsoft.com/_#/apps/1c256a65-83a6-4b5c-9ccf-78f8afb6f1e8/sections/MyNotebook
