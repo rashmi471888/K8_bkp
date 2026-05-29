@@ -1,0 +1,48 @@
+ Mixpanal cluster= 
+az account set --subscription "Enterprise Subscription" && az aks get-credentials --resource-group RG-Prod-APIC --name aksp-apic-003
+az account set --subscription "Enterprise Dev/Test Subscription" && az aks get-credentials --resource-group rg-dev-apic --name aksd-apic-003
+
+ find app    =       kubectl get pod | findstr fuel
+current cluster=   kubectl config current-context
+for cron jobs =     kubectl get cronjob
+mixpanel opratinal link = https://www.mixpanelstatus.com/
+
+
+cmd  ==   kubectl edit cronjob mixpanel-v4-prod-gen
+
+Mix-Panel notebook - 
+https://adb-7838993517766500.0.azuredatabricks.net/?o=7838993517766500#notebook/1808999531946780/command/1808999531946784
+
+Dashboard - https://172.26.96.226/ 
+
+status:-https://www.mixpanelstatus.com/
+
+https://aks-dashboard-apic-prod-003.7-11.com/#/pod?namespace=default
+
+apic 002 link :- https://172.26.48.36/
+
+CRONJOB -   http://172.19.32.207/#/cronjob?namespace=default
+
+mixpanel pipeline - https://dev.azure.com/711StoreSystems/DataEngineering/_release?_a=releases&view=mine&definitionId=189
+
+aksd-apic-002 dashboard link -->  http://aks-dashboard-apic-dev-002.7-11.com/#/pod?namespace=default
+
+to see the logs-
+    kubectl get po
+    kubectl logs -f mlwatch-dev-9d6cd86d5-kmqmb
+    kubectl logs --tail=100 mlwatch-dev-9d6cd86d5-kmqmb
+    kubectl get nodes
+    kubectl get pod mlwatch-dev-9d6cd86d5-kmqmb -o wide
+ kubectl get pod mixpanel-v6-prod-gen2-manual-7nl-dfnfm -o wide
+
+
+https://github.com/apache/airflow/blob/constraints-2.4.3-fix/constraints-3.10.txt
+openssl rsa -inform PEM -pubin -in pub.key -text -noout
+openssl rsa -in server.key -check
+
+
+
+
+
+
+    
